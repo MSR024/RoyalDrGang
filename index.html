@@ -90,18 +90,32 @@ nav.tabs a[aria-current=page]{background:var(--page);color:var(--ink);box-shadow
 .calpage .dn{font:700 clamp(64px,11vw,96px)/1 var(--serif);padding:10px 0 2px}
 .calpage .wd{color:var(--muted);padding-bottom:12px;font-weight:500}
 .hero-text .eyebrow{font-weight:600;opacity:.8}
+/* Slim banner that keeps the celebration in view while scrolling */
+.minibar{position:fixed;left:0;right:0;top:0;z-index:40;display:flex;align-items:center;gap:12px;width:100%;border:0;cursor:pointer;text-align:left;
+  padding:8px max(4vw,16px);padding-top:max(8px,env(safe-area-inset-top));background:var(--band);color:var(--band-ink);font:inherit;
+  box-shadow:0 2px 0 var(--cal,#c76f00),0 8px 24px rgb(40 10 30/.22);transform:translateY(-110%);transition:transform .25s ease;visibility:hidden}
+.minibar.show{transform:none;visibility:visible}
+.minibar .mb-date{flex:none;width:46px;border-radius:8px;overflow:hidden;background:var(--page);color:var(--ink);text-align:center;box-shadow:0 1px 3px rgb(0 0 0/.2)}
+.minibar .mb-date i{display:block;font:600 10px/1.5 var(--sans);font-style:normal;background:var(--cal,var(--an-mark));color:#fff;letter-spacing:.02em}
+.minibar .mb-date b{display:block;font:700 22px/1.15 var(--serif)}
+.minibar .mb-text{min-width:0;display:flex;flex-wrap:wrap;align-items:baseline;gap:2px 10px;flex:1}
+.minibar .mb-hb{font:700 18px/1.2 var(--serif);color:var(--hb,light-dark(#a1124e,#ff9ec6))}
+.minibar .mb-who{font:700 18px/1.2 var(--serif)}
+.minibar .mb-greet{font-size:15px;opacity:.92;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.minibar .mb-up{flex:none;opacity:.7;width:22px;height:22px}
+@media (prefers-reduced-motion:reduce){.minibar{transition:none}}
 /* Regional looks for the day itself */
 body[data-look]{--hb:light-dark(#a1124e,#ff9ec6);--cal:var(--an-mark)}
 body[data-look=telugu]{--band:#f5b81c;--band-ink:#2b1430;--hb:#b3122e;--cal:#c0392b}
 body[data-look=tamil]{--band:#7a1230;--band-ink:#fff1d6;--hb:#ffcf66;--cal:#c8961c}
-body[data-look=tamil] .hero{background-image:radial-gradient(circle,rgb(255 248 234/.32) 1.5px,transparent 2px);background-size:26px 26px}
+body[data-look=tamil] .hero,body[data-look=tamil] .minibar{background-image:radial-gradient(circle,rgb(255 248 234/.32) 1.5px,transparent 2px);background-size:26px 26px}
 body[data-look=sourashtra]{--band:#b0153a;--band-ink:#fff4e0;--hb:#ffe08a;--cal:#c8961c}
-body[data-look=sourashtra] .hero{background-image:radial-gradient(circle at 50% 50%,rgb(255 255 255/.55) 1.6px,transparent 2.2px),radial-gradient(circle at 50% 50%,rgb(255 255 255/.4) 1.3px,transparent 1.8px);
+body[data-look=sourashtra] .hero,body[data-look=sourashtra] .minibar{background-image:radial-gradient(circle at 50% 50%,rgb(255 255 255/.55) 1.6px,transparent 2.2px),radial-gradient(circle at 50% 50%,rgb(255 255 255/.4) 1.3px,transparent 1.8px);
   background-size:30px 30px,30px 30px;background-position:0 0,15px 15px}
 body[data-look=kerala]{--band:#f6efdc;--band-ink:#2b1a0a;--hb:#8a5a00;--cal:#b8902a}
 body[data-look=kerala] .hero{background-image:linear-gradient(#d4a72c,#d4a72c),linear-gradient(#d4a72c,#d4a72c);background-size:100% 4px,100% 2px;background-position:0 calc(100% - 22px),0 calc(100% - 14px);background-repeat:no-repeat}
 body[data-look=muslim]{--band:#0f5d43;--band-ink:#f6edd0;--hb:#f0cf6a;--cal:#b8902a}
-body[data-look=muslim] .hero{background-image:radial-gradient(circle,rgb(212 175 55/.25) 1.4px,transparent 1.9px);background-size:24px 24px}
+body[data-look=muslim] .hero,body[data-look=muslim] .minibar{background-image:radial-gradient(circle,rgb(212 175 55/.25) 1.4px,transparent 1.9px);background-size:24px 24px}
 body[data-look=tamil] .hero::after,body[data-look=sourashtra] .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;
   background:linear-gradient(135deg,transparent 50%,#d4a017 50%) 0 0/12px 12px repeat-x,linear-gradient(225deg,transparent 50%,#d4a017 50%) 0 0/12px 12px repeat-x}
 body[data-look] .hb{color:var(--hb)}
@@ -175,7 +189,7 @@ select,.field input,.field textarea{border:1.5px solid var(--line);border-radius
 .when{font-size:14px;font-weight:600;white-space:nowrap}
 .when.hot{background:var(--ink);color:var(--bg);padding:2px 10px;border-radius:999px}
 .greet{font-size:15px;margin-top:6px;color:var(--ink)}
-.greet span{margin-inline-end:12px}
+.greet span{margin-right:12px;display:inline-block}
 .greet i{font-style:normal;color:var(--muted);font-size:13px;font-family:var(--sans)}
 .comm{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--muted)}
 .comm::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--c,#999)}
@@ -354,6 +368,10 @@ body{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
   .stat{padding:8px 10px}.stat b{font-size:24px}.stat span{font-size:12px}
   .famgrid{grid-template-columns:1fr}
   .toasts{bottom:max(14px,env(safe-area-inset-bottom))}
+  .minibar{gap:10px;padding:7px 12px;padding-top:max(7px,env(safe-area-inset-top))}
+  .minibar .mb-date{width:40px}.minibar .mb-date b{font-size:19px}.minibar .mb-date i{font-size:9px}
+  .minibar .mb-hb,.minibar .mb-who{font-size:16px}
+  .minibar .mb-greet{font-size:13.5px;flex-basis:100%}
   .two{grid-template-columns:1fr}
   table{font-size:14px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}
   .stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:6.5em;text-align:start}
@@ -397,6 +415,7 @@ body{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
   </div>
 </header>
 
+<button type="button" class="minibar" id="minibar" aria-label="Back to today's celebration" tabindex="-1"></button>
 <section class="hero" id="hero" aria-label="Next celebration">
   <svg class="rangoli" id="rangoli" viewBox="-100 -100 200 200" aria-hidden="true"></svg>
   <div class="wrap" id="heroInner"><p>Loading celebrations…</p></div>
@@ -1216,6 +1235,15 @@ function renderHero() {
       </div>
       ${wishHTML(next.events)}
     </div>`;
+  const g = next.events.flatMap((e) => R.greetingsFor(e, S.events))[0];
+  $("#minibar").innerHTML = `
+    <span class="mb-date" aria-hidden="true"><i>${MON3[first.month - 1]}</i><b>${first.day}</b></span>
+    <span class="mb-text">
+      <span class="mb-hb">${next.days === 0 ? esc(happyTitle(next.events)) : esc(R.relativeLabel(next.days))}</span>
+      <span class="mb-who">${who}</span>
+      ${g ? `<span class="mb-greet" lang="${g.lang}" dir="${g.dir}">${esc(g.text)}</span>` : ""}
+    </span>
+    <svg class="i mb-up" aria-hidden="true"><use href="#i-up"/></svg>`;
 }
 
 // English wishes for the day itself; picked per person/couple and year so they vary.
@@ -1419,7 +1447,7 @@ function route() {
   $("#calendarView").hidden = manage;
   $("#manageView").hidden = !manage;
   $("#hero").hidden = manage; $("#garlandWrap").hidden = manage;
-  if (manage) { delete document.body.dataset.look; S.look = null; }
+  if (manage) { delete document.body.dataset.look; S.look = null; $("#minibar").classList.remove("show"); }
   $("#tabCal").toggleAttribute("aria-current", !manage); if (!manage) $("#tabCal").setAttribute("aria-current", "page");
   $("#tabManage").toggleAttribute("aria-current", manage); if (manage) $("#tabManage").setAttribute("aria-current", "page");
   renderAll();
@@ -1660,6 +1688,15 @@ document.addEventListener("click", (e) => {
   else if (t.dataset.act === "clear-search") { S.query = ""; $("#q").value = ""; renderCalendar(); }
 });
 window.addEventListener("hashchange", route);
+// Show the slim banner whenever the big celebration section is scrolled out of view (calendar only).
+const minibar = $("#minibar");
+const heroObserver = new IntersectionObserver(([entry]) => {
+  const show = !entry.isIntersecting && !$("#hero").hidden;
+  minibar.classList.toggle("show", show);
+  minibar.tabIndex = show ? 0 : -1;
+}, { rootMargin: "-40px 0px 0px 0px" });
+heroObserver.observe($("#hero"));
+minibar.addEventListener("click", () => window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }));
 // Roll "today" over at midnight if the page is left open.
 // Keep "today" current: every minute while open, and whenever the page comes back to the
 // screen (iPhone Safari pauses background tabs, and restores pages from its back/forward cache).
