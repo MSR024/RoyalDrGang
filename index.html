@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Royal Dr Gang Celebrations</title>
+<meta name="description" content="Royal Dr Gang — birthdays and wedding anniversaries of our friends and family from Royal Dr, Santa Clara. See who's celebrating today and this month.">
+<link rel="canonical" href="https://www.royaldrgang.com/">
+<!-- Link preview (WhatsApp, iMessage, Facebook, Slack, X) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Royal Dr Gang">
+<meta property="og:title" content="Royal Dr Gang Celebrations">
+<meta property="og:description" content="Who's celebrating today and this month — birthdays and anniversaries of the Royal Dr, Santa Clara gang.">
+<meta property="og:url" content="https://www.royaldrgang.com/">
+<meta property="og:image" content="https://www.royaldrgang.com/og.png">
+<meta property="og:image:secure_url" content="https://www.royaldrgang.com/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Royal Dr Gang Celebrations — birthdays and wedding anniversaries">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Royal Dr Gang Celebrations">
+<meta name="twitter:description" content="Who's celebrating today and this month — birthdays and anniversaries of the Royal Dr, Santa Clara gang.">
+<meta name="twitter:image" content="https://www.royaldrgang.com/og.png">
+<!-- Icons -->
+<meta name="theme-color" content="#f7b52c">
+<meta name="apple-mobile-web-app-title" content="Royal Dr Gang">
+<meta name="application-name" content="Royal Dr Gang">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Outfit:wght@400;500;600&family=Noto+Sans+Telugu:wght@500&family=Noto+Sans+Tamil:wght@500&family=Noto+Sans+Malayalam:wght@500&family=Noto+Nastaliq+Urdu:wght@500&display=swap" rel="stylesheet">
+<style>
+/* VOICE: warm, affectionate, tidy — an Indian family's festive wall calendar, not a party flyer.
+   IDEA: a tear-off calendar page under a marigold-and-mango-leaf thoranam, on a kolam dot grid; wishes in each friend's own language.
+   PICTURE: the next celebration as a big calendar page in a saffron band; the month list is the working thing.
+   COLOUR+TYPE: white / deep plum ink, saffron-marigold for birthdays, rani pink for anniversaries; Fraunces numerals, Outfit text.
+   LAYOUT: band hero, sticky-free toolbar, date groups as hanging pages; year view as 12 compact tiles; stacks under 600px. */
+:root{color-scheme:light dark;
+  --bg:light-dark(#ffffff,#160c19);--surface:light-dark(#fbf6f9,#21142a);--line:light-dark(#ecdfe8,#3a2944);
+  --ink:light-dark(#2b1430,#f6eef6);--muted:light-dark(#6c5671,#bfadc4);
+  --band:light-dark(#f7b52c,#3a1838);--band-ink:light-dark(#2b1430,#fde8c4);--page:light-dark(#ffffff,#24142b);
+  --bd:light-dark(#8a4a00,#ffc96b);--bd-bg:light-dark(#fff1d4,#3b2a13);--bd-mark:#f2a20c;
+  --an:light-dark(#a1124e,#ff93c0);--an-bg:light-dark(#fde4ee,#3e1428);--an-mark:#d6246e;
+  --warn:light-dark(#8b3b00,#ffb37a);--warn-bg:light-dark(#fff0e2,#3a2212);
+  --ok:light-dark(#2f6b3a,#9fd8a8);--focus:light-dark(#6b1fa8,#e0b3ff);
+  --shadow:0 1px 2px rgb(43 20 48/.06),0 6px 18px rgb(43 20 48/.07);
+  --serif:"Fraunces",Georgia,serif;--sans:"Outfit",system-ui,-apple-system,"Segoe UI",sans-serif}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 var(--sans);overflow-x:clip}
+h1,h2,h3,p{margin:0}button,input,select,textarea{font:inherit;color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:max(4vw,16px)}
+svg.i{width:1.15em;height:1.15em;flex:none;vertical-align:-.2em;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px;border-radius:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* header */
+.top{background:var(--band);color:var(--band-ink)}
+.top .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:8px 20px;padding-block:14px}
+.brand{font:700 clamp(22px,3vw,28px)/1.1 var(--serif);letter-spacing:-.01em;margin-right:auto}
+.today-date{font-weight:500;opacity:.85}
+nav.tabs{display:flex;gap:4px;background:rgb(255 255 255/.35);padding:4px;border-radius:999px}
+:root:not([data-theme=light]) nav.tabs{background:light-dark(rgb(255 255 255/.35),rgb(0 0 0/.25))}
+nav.tabs a{padding:8px 16px;border-radius:999px;text-decoration:none;color:inherit;font-weight:600;min-height:40px;display:inline-flex;align-items:center}
+nav.tabs a[aria-current=page]{background:var(--page);color:var(--ink);box-shadow:var(--shadow)}
+
+/* hero */
+.hero{background:var(--band);color:var(--band-ink);padding-bottom:40px;position:relative;overflow:hidden;
+  background-image:radial-gradient(circle,light-dark(rgb(255 255 255/.45),rgb(255 255 255/.08)) 1.4px,transparent 1.9px);background-size:24px 24px}
+.hero .wrap{position:relative;z-index:1}
+.rangoli{position:absolute;right:max(2vw,8px);top:50%;width:min(300px,34vw);height:auto;transform:translateY(-55%);opacity:.9;pointer-events:none}
+.garland-wrap{position:relative;height:0}
+.garland{display:block;width:100%;height:34px;position:absolute;left:0;top:-14px;z-index:2;pointer-events:none}
+.wish{margin:2px 0 12px;font-size:clamp(19px,2.4vw,24px);font-weight:500;line-height:1.5}
+.wish small{display:block;font:500 14px/1.3 var(--sans);opacity:.75}
+.wish [lang]{display:block}
+[lang=te]{font-family:"Noto Sans Telugu",var(--sans)}[lang=ta]{font-family:"Noto Sans Tamil",var(--sans)}
+[lang=ml]{font-family:"Noto Sans Malayalam",var(--sans)}[lang=ur]{font-family:"Noto Nastaliq Urdu",serif;line-height:2}
+.hero .wrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(18px,4vw,44px);align-items:center;padding-top:8px}
+.calpage{width:clamp(132px,22vw,188px);background:var(--page);color:var(--ink);border-radius:14px;box-shadow:0 2px 0 rgb(0 0 0/.08),0 14px 30px rgb(60 20 40/.18);overflow:hidden;text-align:center;transform:rotate(-2deg)}
+.calpage .mo{background:var(--an-mark);color:#fff;font-weight:600;letter-spacing:.02em;padding:8px 0;position:relative}
+.calpage .mo::before,.calpage .mo::after{content:"";position:absolute;top:-6px;width:10px;height:18px;border-radius:6px;background:var(--band);left:28%}
+.calpage .mo::after{left:auto;right:28%}
+.calpage.bd .mo{background:#c76f00}
+.calpage .dn{font:700 clamp(64px,11vw,96px)/1 var(--serif);padding:10px 0 2px}
+.calpage .wd{color:var(--muted);padding-bottom:12px;font-weight:500}
+.hero-text .eyebrow{font-weight:600;opacity:.8}
+.hero-text h2{font:700 clamp(30px,4.6vw,48px)/1.05 var(--serif);text-wrap:balance;margin:4px 0 6px;letter-spacing:-.01em}
+.hero-text{max-width:640px}
+.hero-text .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:6px;padding:4px 12px;border-radius:999px;font-weight:600;font-size:15px;white-space:nowrap}
+.pill.solid{background:var(--ink);color:var(--bg)}
+.pill.soft{background:rgb(255 255 255/.5);color:var(--band-ink)}
+:root:not([data-theme=light]) .pill.soft{background:light-dark(rgb(255 255 255/.5),rgb(255 255 255/.1))}
+.then{margin-top:12px;font-size:15px;opacity:.9}
+
+/* toolbar */
+.toolbar{display:grid;gap:12px;padding:30px 0 8px}
+.row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.search{position:relative;flex:1 1 260px}
+.search svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.search input{width:100%;padding:11px 14px 11px 42px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);min-height:46px;font-size:16px}
+.search input:focus{border-color:var(--focus);outline:none;box-shadow:0 0 0 3px light-dark(rgb(107 31 168/.15),rgb(224 179 255/.2))}
+.monthnav{display:flex;gap:6px;align-items:center}
+select,.field input,.field textarea{border:1.5px solid var(--line);border-radius:12px;background:var(--bg);padding:10px 12px;min-height:46px;font-size:16px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:9px 16px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);font-weight:600;cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s}
+.btn:hover{border-color:var(--muted)}
+.btn.icon{width:44px;padding:0}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.bdb{background:var(--bd-bg);color:var(--bd);border-color:transparent}
+.btn.anb{background:var(--an-bg);color:var(--an);border-color:transparent}
+.btn.danger{background:light-dark(#b3133f,#ff7a9c);color:light-dark(#fff,#2a0812);border-color:transparent}
+.btn.ghost{border-color:transparent;background:transparent}
+.btn.ghost:hover{background:var(--surface)}
+.btn.sm{min-height:38px;padding:6px 12px;font-size:15px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{min-height:40px;padding:6px 14px;border-radius:999px;border:1.5px solid var(--line);background:var(--bg);font-weight:500;cursor:pointer;display:inline-flex;gap:6px;align-items:center}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.seg{display:inline-flex;border:1.5px solid var(--line);border-radius:12px;padding:3px;margin-left:auto}
+.seg button{border:0;background:none;padding:7px 14px;border-radius:9px;font-weight:600;cursor:pointer;min-height:38px}
+.seg button[aria-pressed=true]{background:var(--surface);box-shadow:var(--shadow)}
+
+/* month list */
+.section-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:18px 0 6px}
+.section-head h2{font:700 clamp(26px,3.4vw,34px)/1.1 var(--serif)}
+.section-head p{color:var(--muted)}
+.day{display:grid;grid-template-columns:96px minmax(0,1fr);gap:18px;padding:18px 0;border-top:1px solid var(--line);animation:rise .35s ease both}
+.dh{display:flex;flex-direction:column;align-items:flex-start}
+.dh .dnum{font:700 54px/1 var(--serif)}
+.dh b{font-weight:600}
+.dh span{color:var(--muted);font-size:14px;line-height:1.35}
+.day.is-today .dnum{color:var(--an)}
+.cards{display:grid;gap:10px}
+.card{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px;align-items:start;padding:14px 16px;border-radius:16px;background:var(--surface);border:1.5px solid transparent}
+.card .ico{width:44px;height:44px;border-radius:12px;display:grid;place-items:center}
+.card.bd .ico{background:var(--bd-bg);color:var(--bd)}
+.card.an .ico{background:var(--an-bg);color:var(--an)}
+.card .ico svg{width:24px;height:24px}
+.card.is-today{border-color:var(--bd-mark);background:light-dark(#fffaf0,#2a1b20)}
+.card.an.is-today{border-color:var(--an-mark)}
+.kind{font-size:14px;font-weight:600}
+.card.bd .kind{color:var(--bd)}.card.an .kind{color:var(--an)}
+.card h3{font:600 20px/1.25 var(--sans);margin:2px 0}
+.aka,.rel,.note{font-size:14px;color:var(--muted)}
+.note{margin-top:6px;padding-left:10px;border-left:2px solid var(--line)}
+.badge{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.badge.warn{background:var(--warn-bg);color:var(--warn)}
+.badge.ok{color:var(--ok);padding-inline:0}
+.side{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.when{font-size:14px;font-weight:600;white-space:nowrap}
+.when.hot{background:var(--ink);color:var(--bg);padding:2px 10px;border-radius:999px}
+.greet{font-size:15px;margin-top:6px;color:var(--ink)}
+.greet span{margin-inline-end:12px}
+.greet i{font-style:normal;color:var(--muted);font-size:13px;font-family:var(--sans)}
+.comm{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--muted)}
+.comm::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--c,#999)}
+.c-telugu{--c:#e0a100}.c-tamil,.c-tamil-sourashtra{--c:#c2185b}.c-malayali{--c:#b8912f}.c-muslim{--c:#1f7a4d}
+.tags{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:4px}
+mark{background:light-dark(#ffe58a,#6b5310);color:inherit;border-radius:3px}
+
+/* empty / banners */
+.empty{text-align:center;padding:40px 16px 56px;border-top:1px solid var(--line)}
+.empty svg{width:150px;height:110px;margin-bottom:10px}
+.empty h3{font:700 24px/1.2 var(--serif);margin-bottom:6px}
+.empty p{color:var(--muted);margin-bottom:16px}
+.fstatus{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:4px 0 12px;padding:8px 12px;border-radius:12px;background:var(--warn-bg);color:var(--warn);font-weight:600;font-size:15px}
+.fpill{display:inline-flex;align-items:center;gap:4px;background:var(--bg);color:var(--ink);border-radius:999px;padding:2px 4px 2px 12px}
+.fpill button{border:0;background:none;width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:18px;line-height:1;color:inherit}
+.fpill button:hover{background:var(--surface)}
+.fstatus .btn{color:inherit}
+.banner{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:var(--warn-bg);color:var(--warn);margin-top:16px;font-weight:500}
+
+/* year */
+.year{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin:14px 0 40px}
+.mtile{text-align:left;border:1.5px solid var(--line);background:var(--bg);border-radius:16px;padding:14px 16px;cursor:pointer;display:flex;flex-direction:column;gap:8px;transition:border-color .15s,transform .15s}
+.mtile:hover{border-color:var(--muted);transform:translateY(-2px)}
+.mtile.cur{border-color:var(--bd-mark);box-shadow:0 0 0 3px light-dark(#fde7b7,#4a3412)}
+.mtile header{display:flex;justify-content:space-between;align-items:baseline;width:100%}
+.mtile h3{font:700 22px/1.1 var(--serif)}
+.count{font-size:14px;color:var(--muted);font-weight:500}
+.mtile ul{list-style:none;margin:0;padding:0;display:grid;gap:3px;font-size:15px}
+.mtile li{display:grid;grid-template-columns:26px 20px minmax(0,1fr);gap:4px;align-items:start}
+.mtile li b{font-weight:600;text-align:right;padding-right:4px}
+.mtile li.bd svg{color:var(--bd)}.mtile li.an svg{color:var(--an)}
+.mtile li .q{color:var(--warn);font-weight:700}
+.mtile .none{color:var(--muted);font-size:15px}
+
+/* manage */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:18px 0}
+.stat{background:var(--surface);border-radius:14px;padding:12px 16px}
+.stat b{display:block;font:700 34px/1.1 var(--serif)}
+.stat span{color:var(--muted);font-size:14px}
+.stat.warn b{color:var(--warn)}.stat.ok b{color:var(--ok)}
+.panel{border:1.5px solid var(--line);border-radius:16px;padding:16px;display:grid;gap:12px;margin-bottom:16px}
+.panel h3{font:600 18px/1.2 var(--sans)}
+.panel p{color:var(--muted);font-size:15px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+table{width:100%;border-collapse:collapse;font-size:15px}
+th{text-align:left;font-weight:600;color:var(--muted);font-size:14px;padding:8px;border-bottom:1.5px solid var(--line)}
+td{padding:10px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+td.date{white-space:nowrap;font-weight:600}
+td .aka{font-size:13px}
+.acts{display:flex;flex-wrap:wrap;gap:4px;justify-content:flex-end}
+.typetag{font-weight:600;font-size:14px;display:inline-flex;gap:5px;align-items:center}
+.typetag.bd{color:var(--bd)}.typetag.an{color:var(--an)}
+.savedinfo{color:var(--muted);font-size:14px;margin:6px 0 40px}
+
+.famgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin:10px 0 14px}
+.fam{border:1.5px solid var(--line);border-radius:16px;padding:14px 16px;display:grid;gap:8px;align-content:start}
+.fam.gap{border-color:var(--warn)}
+.fam h3{font:700 19px/1.2 var(--serif)}
+.fam .ann{font-size:14px;color:var(--an);font-weight:600}
+.fam ul{list-style:none;margin:0;padding:0;display:grid;gap:4px;font-size:15px}
+.fam li{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.fam li span:last-child{color:var(--muted);white-space:nowrap;font-size:14px}
+.fam .lbl{font-size:13px;font-weight:600;color:var(--muted);margin-top:2px}
+.fam .miss{color:var(--warn);font-weight:600}
+.linkbtn{background:none;border:0;padding:0;color:inherit;font:inherit;cursor:pointer;text-align:left;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+.unl{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 26px}
+.unl .chip{min-height:36px;font-size:15px}
+
+/* dialog */
+dialog{border:0;border-radius:20px;padding:0;width:min(560px,calc(100vw - 24px));max-height:calc(100dvh - 24px);background:var(--bg);color:var(--ink);box-shadow:0 20px 60px rgb(0 0 0/.3)}
+dialog::backdrop{background:rgb(30 10 35/.45)}
+.dlg{padding:22px;display:grid;gap:14px}
+.dlg h2{font:700 24px/1.2 var(--serif)}
+.dlg .foot{display:flex;flex-wrap:wrap;gap:8px;justify-content:flex-end;margin-top:6px}
+.field{display:grid;gap:5px}
+.field label,.field legend{font-weight:600;font-size:15px}
+.field small{color:var(--muted);font-size:13px}
+.field textarea{min-height:90px;resize:vertical}
+.field.err input,.field.err select{border-color:light-dark(#b3133f,#ff7a9c)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px}
+.check{display:flex;gap:10px;align-items:center;font-weight:500;min-height:44px}
+.check input{width:20px;height:20px;accent-color:var(--an-mark)}
+.errors{background:var(--warn-bg);color:var(--warn);border-radius:12px;padding:10px 14px;font-size:15px}
+.errors ul{margin:4px 0 0;padding-left:18px}
+.dupe{border:1.5px solid var(--line);border-radius:12px;padding:12px;display:grid;gap:8px}
+.dupe .opts{display:flex;flex-wrap:wrap;gap:6px 16px}
+.dupe label{display:flex;gap:6px;align-items:center;min-height:36px}
+.mono{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px}
+
+/* toast */
+.toasts{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);display:grid;gap:8px;z-index:50;width:min(480px,calc(100vw - 24px))}
+.toast{background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;box-shadow:0 10px 30px rgb(0 0 0/.25);animation:rise .25s ease both}
+.toast button{background:none;border:1.5px solid currentColor;color:inherit;border-radius:10px;padding:4px 12px;font-weight:600;cursor:pointer;min-height:36px}
+@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+[hidden]{display:none!important}
+
+@media (max-width:600px){
+  .hero .wrap{grid-template-columns:1fr;justify-items:start}
+  .calpage{transform:rotate(-1.5deg)}
+  .rangoli{display:none}
+  .seg{margin-left:0}
+  .day{grid-template-columns:1fr;gap:8px}
+  .dh{flex-direction:row;align-items:baseline;gap:10px}
+  .dh .dnum{font-size:40px}
+  .card{grid-template-columns:auto minmax(0,1fr);padding:12px}
+  .side{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center}
+  .two{grid-template-columns:1fr}
+  table{font-size:14px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}
+  .stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:6.5em;text-align:start}
+  .stack td::before{content:attr(data-l);float:inline-start;width:6em;margin-inline-start:-6.5em;color:var(--muted);font-weight:500}
+  .acts{justify-content:flex-start}
+}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-cake" viewBox="0 0 24 24"><path d="M4 21h16M5 21v-7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v7"/><path d="M5 16c1.2 1 2.3 1 3.5 0s2.3-1 3.5 0 2.3 1 3.5 0 2.3-1 3.5 0"/><path d="M12 12V8M8 12V9M16 12V9"/><path d="M12 5.5c.8-.6.8-1.6 0-2.5-.8.9-.8 1.9 0 2.5Z"/></symbol>
+  <symbol id="i-rings" viewBox="0 0 24 24"><circle cx="9" cy="14" r="5.5"/><circle cx="15" cy="14" r="5.5"/><path d="M7.5 5 9 3h0l1.5 2L9 6.5Z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="m15 5-7 7 7 7"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19Z"/><path d="M12 10v4.5M12 17.5v.01"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 16V5M7 9.5l5-5 5 5M5 20h14"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"/></symbol>
+  <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/></symbol>
+  <symbol id="i-flower" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="#f2a20c"/><circle cx="10" cy="10" r="5.2" fill="#f7c04a"/><circle cx="10" cy="10" r="2.2" fill="#d9780a"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 20 20"><path d="M2 10c4-5 12-5 16 0-4 5-12 5-16 0Z" fill="#3f8a4a"/></symbol>
+  <symbol id="i-mango" viewBox="0 0 12 26"><path d="M6 0C11 6 11 17 6 26 1 17 1 6 6 0Z" fill="#2f7d3c"/><path d="M6 2v22" stroke="#a6d18f" stroke-width=".8"/></symbol>
+</svg>
+
+<header class="top">
+  <div class="wrap">
+    <h1 class="brand">Royal Dr Gang Celebrations</h1>
+    <p class="today-date" id="todayDate"></p>
+    <nav class="tabs" aria-label="Sections">
+      <a href="#" id="tabCal">Calendar</a>
+      <a href="#manage" id="tabManage">Manage events</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="hero" aria-label="Next celebration">
+  <svg class="rangoli" id="rangoli" viewBox="-100 -100 200 200" aria-hidden="true"></svg>
+  <div class="wrap" id="heroInner"><p>Loading celebrations…</p></div>
+</section>
+<div class="garland-wrap" id="garlandWrap"><svg class="garland" id="garland" aria-hidden="true"></svg></div>
+
+<main id="calendarView" class="wrap">
+  <div class="toolbar" role="search">
+    <div class="row">
+      <label class="search"><span class="sr">Search names and nicknames</span>
+        <svg class="i"><use href="#i-search"/></svg>
+        <input id="q" type="search" placeholder="Search by name or pet name (e.g. Buddy, Bachi, Cherry)" autocomplete="off">
+      </label>
+      <div class="monthnav" id="monthNav">
+        <button class="btn icon" id="prevM" aria-label="Previous month"><svg class="i"><use href="#i-left"/></svg></button>
+        <label class="sr" for="monthSel">Month</label>
+        <select id="monthSel"></select>
+        <button class="btn icon" id="nextM" aria-label="Next month"><svg class="i"><use href="#i-right"/></svg></button>
+        <button class="btn" id="todayBtn">Today</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="chips" id="filters" role="group" aria-label="Filter events">
+        <button class="chip" data-f="all">All events</button>
+        <button class="chip" data-f="birthday"><svg class="i"><use href="#i-cake"/></svg>Birthdays</button>
+        <button class="chip" data-f="anniversary"><svg class="i"><use href="#i-rings"/></svg>Wedding anniversaries</button>
+      </div>
+      <div class="seg" role="group" aria-label="View">
+        <button data-v="month">Selected month</button>
+        <button data-v="year">Full year</button>
+      </div>
+    </div>
+  </div>
+  <div id="banner"></div>
+  <div id="content" aria-live="polite"></div>
+</main>
+
+<main id="manageView" class="wrap" hidden>
+  <div class="section-head"><h2>Manage events</h2><p>Add, correct or remove celebrations. Changes are saved in this browser.</p></div>
+  <div class="stats" id="mstats"></div>
+  <div class="grid2">
+    <div class="panel">
+      <h3>Add a celebration</h3>
+      <div class="row">
+        <button class="btn bdb" id="addB"><svg class="i"><use href="#i-cake"/></svg>Add birthday</button>
+        <button class="btn anb" id="addA"><svg class="i"><use href="#i-rings"/></svg>Add wedding anniversary</button>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Backup and restore</h3>
+      <div class="row">
+        <button class="btn sm" id="expDl"><svg class="i"><use href="#i-down"/></svg>Export JSON</button>
+        <button class="btn sm" id="expCopy"><svg class="i"><use href="#i-copy"/></svg>Copy JSON</button>
+        <button class="btn sm" id="impFile"><svg class="i"><use href="#i-up"/></svg>Import file</button>
+        <button class="btn sm" id="impPaste">Paste JSON</button>
+        <button class="btn sm" id="reloadSeed"><svg class="i"><use href="#i-reset"/></svg>Reload latest seed data</button>
+        <button class="btn sm ghost" id="restore">Restore original list</button>
+      </div>
+      <input type="file" id="fileIn" accept="application/json,.json" hidden>
+    </div>
+  </div>
+  <section class="families" aria-labelledby="famTitle">
+    <div class="section-head"><h2 id="famTitle" style="font-size:26px">Families</h2><p id="famSummary"></p></div>
+    <div class="famgrid" id="famGrid"></div>
+    <div id="famUnlinked"></div>
+  </section>
+  <div class="section-head"><h2 style="font-size:26px">All events</h2></div>
+  <div class="toolbar" style="padding-top:4px">
+    <div class="row">
+      <label class="search"><span class="sr">Search events</span>
+        <svg class="i"><use href="#i-search"/></svg>
+        <input id="mq" type="search" placeholder="Search events" autocomplete="off">
+      </label>
+      <div class="chips" id="mfilters" role="group" aria-label="Filter list">
+        <button class="chip" data-f="all">All</button>
+        <button class="chip" data-f="birthday">Birthdays</button>
+        <button class="chip" data-f="anniversary">Anniversaries</button>
+        <button class="chip" data-f="unverified">Needs confirmation</button>
+      </div>
+    </div>
+  </div>
+  <div id="mlist"></div>
+  <p class="savedinfo" id="savedInfo"></p>
+</main>
+
+<dialog id="dlg" aria-labelledby="dlgTitle"></dialog>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+<script>/* Royal Gang Celebrations — pure logic (no DOM). Works in the browser (window.RGC) and in Node (module.exports). */
+(function (root) {
+  "use strict";
+
+  const STORAGE_KEY = "royal-gang-celebrations:v1";
+  const SCHEMA_VERSION = 1;
+  const MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+  const DAYS_IN_MONTH = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; // Feb 29 allowed (birth year unknown)
+
+  // Communities of the group, with their home region and native-script greetings.
+  const COMMUNITIES = {
+    telugu: { label: "Telugu", region: "Andhra Pradesh & Telangana", lang: "te", dir: "ltr",
+      birthday: ["పుట్టినరోజు శుభాకాంక్షలు", "Puttinaroju Shubhakankshalu"],
+      anniversary: ["పెళ్లిరోజు శుభాకాంక్షలు", "Pelliroju Shubhakankshalu"] },
+    tamil: { label: "Tamil", region: "Tamil Nadu", lang: "ta", dir: "ltr",
+      birthday: ["இனிய பிறந்தநாள் வாழ்த்துகள்", "Iniya Piranthanaal Vaazhthukal"],
+      anniversary: ["இனிய திருமண நாள் வாழ்த்துகள்", "Iniya Thirumana Naal Vaazhthukal"] },
+    "tamil-sourashtra": { label: "Tamil & Sourashtra", region: "Tamil Nadu", lang: "ta", dir: "ltr",
+      birthday: ["இனிய பிறந்தநாள் வாழ்த்துகள்", "Iniya Piranthanaal Vaazhthukal"],
+      anniversary: ["இனிய திருமண நாள் வாழ்த்துகள்", "Iniya Thirumana Naal Vaazhthukal"] },
+    malayali: { label: "Malayali", region: "Kerala", lang: "ml", dir: "ltr",
+      birthday: ["ജന്മദിനാശംസകൾ", "Janmadinashamsakal"],
+      anniversary: ["വിവാഹ വാർഷികാശംസകൾ", "Vivaha Varshikashamsakal"] },
+    muslim: { label: "Muslim", region: "", lang: "ur", dir: "rtl",
+      birthday: ["سالگرہ مبارک", "Saalgirah Mubarak"],
+      anniversary: ["شادی کی سالگرہ مبارک", "Shaadi ki Saalgirah Mubarak"] },
+  };
+
+  const norm = (s) => String(s || "").toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/\s+/g, " ").trim();
+
+  // Loose "sounds-like" key for search only (never for duplicate detection):
+  // Sateesh/Satheesh/Satish, Tara/Thara, Apurva/Apoorva, Venky/Venki, Eshan/Eshaan all collapse together.
+  function phon(s) {
+    return norm(s).replace(/[^a-z ]/g, "")
+      .replace(/ee/g, "i").replace(/oo/g, "u").replace(/aa/g, "a")
+      .replace(/([bcdgjkpstz])h/g, "$1").replace(/y\b/g, "i")
+      .replace(/(.)\1+/g, "$1");
+  }
+
+  /* ---------- Naming ---------- */
+  function displayName(ev) {
+    return ev.type === "anniversary" ? ev.people.join(" & ") : ev.name;
+  }
+  function formatDayMonth(month, day) {
+    return MONTHS[month - 1] + " " + day;
+  }
+
+  /* ---------- Sorting & grouping ---------- */
+  function compareEvents(a, b) {
+    return a.month - b.month || a.day - b.day ||
+      (a.type === b.type ? 0 : a.type === "birthday" ? -1 : 1) ||
+      displayName(a).localeCompare(displayName(b));
+  }
+  function sortEvents(events) {
+    return events.slice().sort(compareEvents);
+  }
+  function groupByDate(events) {
+    const groups = [];
+    for (const ev of sortEvents(events)) {
+      const last = groups[groups.length - 1];
+      if (last && last.month === ev.month && last.day === ev.day) last.events.push(ev);
+      else groups.push({ month: ev.month, day: ev.day, events: [ev] });
+    }
+    return groups;
+  }
+  function eventsInMonth(events, month) {
+    return sortEvents(events.filter((e) => e.month === month));
+  }
+  function monthSummary(events) {
+    return MONTHS.map((name, i) => {
+      const list = eventsInMonth(events, i + 1);
+      return {
+        month: i + 1, name, total: list.length,
+        birthdays: list.filter((e) => e.type === "birthday"),
+        anniversaries: list.filter((e) => e.type === "anniversary"),
+      };
+    });
+  }
+
+  /* ---------- Dates ---------- */
+  function currentMonth(today) {
+    return (today || new Date()).getMonth() + 1;
+  }
+  const isLeap = (y) => (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0;
+  // Date of this event in a given year (Feb 29 is observed on Feb 28 in non-leap years).
+  function occurrenceIn(ev, year) {
+    const day = ev.month === 2 && ev.day === 29 && !isLeap(year) ? 28 : ev.day;
+    return new Date(year, ev.month - 1, day);
+  }
+  function startOfDay(d) {
+    return new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  }
+  // Whole days until the next occurrence (0 = today). Rolls into next year (Dec → Jan).
+  function daysUntil(ev, today) {
+    const t = startOfDay(today || new Date());
+    let next = occurrenceIn(ev, t.getFullYear());
+    if (next < t) next = occurrenceIn(ev, t.getFullYear() + 1);
+    return Math.round((next - t) / 86400000);
+  }
+  function relativeLabel(days) {
+    if (days === 0) return "Today";
+    if (days === 1) return "Tomorrow";
+    return "In " + days + " days";
+  }
+  // All events sharing the soonest upcoming date (today included).
+  function nextCelebration(events, today) {
+    if (!events.length) return null;
+    let best = Infinity, list = [];
+    for (const ev of events) {
+      const d = daysUntil(ev, today);
+      if (d < best) { best = d; list = [ev]; }
+      else if (d === best) list.push(ev);
+    }
+    return { days: best, events: sortEvents(list) };
+  }
+  // Soonest date strictly after today (used when today already has celebrations).
+  function nextAfterToday(events, today) {
+    const future = events.filter((e) => daysUntil(e, today) > 0);
+    return nextCelebration(future, today);
+  }
+  function upcoming(events, today, limit) {
+    return events.map((ev) => ({ ev, days: daysUntil(ev, today) }))
+      .sort((a, b) => a.days - b.days || compareEvents(a.ev, b.ev))
+      .slice(0, limit || events.length);
+  }
+
+  /* ---------- Search & filters ---------- */
+  // Map each person's canonical name to their known aliases (taken from birthday records).
+  function buildAliasIndex(events) {
+    const idx = new Map();
+    for (const ev of events) {
+      if (ev.type !== "birthday") continue;
+      const key = norm(ev.name);
+      const set = idx.get(key) || new Set([key]);
+      (ev.aliases || []).forEach((a) => set.add(norm(a)));
+      idx.set(key, set);
+    }
+    return idx;
+  }
+  // Community keys for an event: a birthday's own tag; an anniversary takes each partner's tag.
+  function communitiesOf(ev, events) {
+    if (ev.type === "birthday") return COMMUNITIES[ev.community] ? [ev.community] : [];
+    if (ev.community && COMMUNITIES[ev.community]) return [ev.community];
+    const idx = buildAliasIndex(events || []);
+    const out = [];
+    for (const p of ev.people) {
+      const canon = canonicalPerson(p, idx);
+      const person = (events || []).find((e) => e.type === "birthday" && norm(e.name) === canon);
+      if (person && COMMUNITIES[person.community] && !out.includes(person.community)) out.push(person.community);
+    }
+    return out;
+  }
+  // Native-script greetings for an event, de-duplicated (Tamil and Tamil & Sourashtra share one).
+  function greetingsFor(ev, events) {
+    const seen = new Set(), out = [];
+    for (const key of communitiesOf(ev, events)) {
+      const c = COMMUNITIES[key], [text, roman] = c[ev.type];
+      if (seen.has(text)) continue;
+      seen.add(text);
+      out.push({ community: key, label: c.label, lang: c.lang, dir: c.dir, text, roman });
+    }
+    return out;
+  }
+  function wishText(ev, events) {
+    const english = (ev.type === "birthday" ? "Happy Birthday, " : "Happy Wedding Anniversary, ") + displayName(ev) + "!";
+    return [english, ...greetingsFor(ev, events).map((g) => g.text + "!")].join("\n");
+  }
+
+  function searchTerms(ev, aliasIndex) {
+    const terms = [norm(displayName(ev)), ...(ev.aliases || []).map(norm)];
+    for (const key of ev._communities || (ev.community ? [ev.community] : [])) {
+      const c = COMMUNITIES[key];
+      if (c) terms.push(norm(c.label), norm(c.region));
+    }
+    if (ev.type === "anniversary") {
+      for (const p of ev.people) {
+        terms.push(norm(p));
+        const set = aliasIndex && aliasIndex.get(norm(p));
+        if (set) set.forEach((a) => terms.push(a));
+      }
+    }
+    return terms;
+  }
+  function termMatches(term, q) {
+    if (term.includes(q)) return true;
+    const pq = phon(q);
+    return pq.length >= 3 && phon(term).includes(pq);
+  }
+  function matchesQuery(ev, query, aliasIndex) {
+    const q = norm(query);
+    if (!q) return true;
+    return searchTerms(ev, aliasIndex).some((t) => termMatches(t, q));
+  }
+  function matchesType(ev, filter) {
+    if (filter === "birthday") return ev.type === "birthday";
+    if (filter === "anniversary") return ev.type === "anniversary";
+    if (filter === "unverified") return !ev.verified;
+    return true;
+  }
+  function filterEvents(events, opts) {
+    const o = opts || {};
+    const aliasIndex = buildAliasIndex(events);
+    const q = norm(o.query);
+    return sortEvents(events.filter((ev) =>
+      matchesType(ev, o.filter || "all") &&
+      (o.month == null || ev.month === o.month) &&
+      (!q || matchesQuery(ev.type === "anniversary" ? Object.assign({}, ev, { _communities: communitiesOf(ev, events) }) : ev, q, aliasIndex))));
+  }
+  // Which alias matched (to show "matched Buddy"), or null when the canonical name matched.
+  function matchedAlias(ev, query, events) {
+    const q = norm(query);
+    if (!q || norm(displayName(ev)).includes(q)) return null;
+    const exact = (ev.aliases || []).find((a) => norm(a).includes(q));
+    if (exact) return exact;
+    if (termMatches(norm(displayName(ev)), q)) return null;
+    const own = (ev.aliases || []).find((a) => termMatches(norm(a), q));
+    if (own) return own;
+    if (ev.type === "anniversary" && events) { // a partner's personal nickname, e.g. "Buddy"
+      for (const p of ev.people) {
+        const person = events.find((e) => e.type === "birthday" && norm(e.name) === norm(p));
+        const hit = person && (person.aliases || []).find((a) => termMatches(norm(a), q));
+        if (hit) return hit;
+      }
+    }
+    return null;
+  }
+
+  /* ---------- Validation ---------- */
+  function slug(s) {
+    return norm(s).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "") || "event";
+  }
+  function makeId(ev, existingIds) {
+    const base = ev.type + "-" + slug(ev.type === "anniversary" ? ev.people.join(" ") : ev.name);
+    let id = base, n = 2;
+    while (existingIds && existingIds.has(id)) id = base + "-" + n++;
+    return id;
+  }
+  function cleanList(v) {
+    const arr = Array.isArray(v) ? v : typeof v === "string" ? v.split(",") : [];
+    const seen = new Set();
+    return arr.map((s) => String(s).trim()).filter((s) => s && !seen.has(norm(s)) && seen.add(norm(s)));
+  }
+  // Returns { event, errors }. Unknown extra fields (birthYear, photo, reminder…) are preserved.
+  function validateEvent(raw) {
+    const errors = [];
+    if (!raw || typeof raw !== "object") return { event: null, errors: ["Record is not an object."] };
+    const ev = Object.assign({}, raw);
+    ev.month = Number(ev.month);
+    ev.day = Number(ev.day);
+    ev.aliases = cleanList(ev.aliases);
+    ev.verified = ev.verified === true || ev.verified === "true";
+    if (ev.type === "birthday") {
+      ev.name = String(ev.name || "").trim();
+      if (!ev.name) errors.push("Name is required.");
+      delete ev.people;
+    } else if (ev.type === "anniversary") {
+      const p = Array.isArray(ev.people) ? ev.people.map((s) => String(s || "").trim()) : [];
+      if (p.length !== 2 || !p[0] || !p[1]) errors.push("Both partners' names are required.");
+      ev.people = [p[0] || "", p[1] || ""];
+      delete ev.name;
+    } else {
+      errors.push('Type must be "birthday" or "anniversary".');
+    }
+    if (!Number.isInteger(ev.month) || ev.month < 1 || ev.month > 12) errors.push("Month must be 1–12.");
+    else if (!Number.isInteger(ev.day) || ev.day < 1 || ev.day > DAYS_IN_MONTH[ev.month - 1])
+      errors.push("Day must be between 1 and " + DAYS_IN_MONTH[ev.month - 1] + " for " + MONTHS[ev.month - 1] + ".");
+    if (ev.community != null && !COMMUNITIES[ev.community]) delete ev.community;
+    for (const k of ["relationship", "note"]) {
+      if (ev[k] == null || String(ev[k]).trim() === "") delete ev[k];
+      else ev[k] = String(ev[k]).trim();
+    }
+    if (ev.id != null) ev.id = String(ev.id);
+    return { event: errors.length ? null : ev, errors };
+  }
+
+  /* ---------- Duplicate detection ---------- */
+  // Identity keys for a person: canonical name plus aliases. Never fuzzy — "Meenu" ≠ "Meenaz", "Kishore Avengu" ≠ "Kishore Koneti".
+  function personKeys(name, aliasIndex) {
+    const k = norm(name);
+    const keys = new Set([k]);
+    if (aliasIndex) {
+      if (aliasIndex.has(k)) aliasIndex.get(k).forEach((a) => keys.add(a));
+      else for (const [canon, set] of aliasIndex) if (set.has(k)) { set.forEach((a) => keys.add(a)); keys.add(canon); }
+    }
+    return keys;
+  }
+  const overlaps = (a, b) => { for (const x of a) if (b.has(x)) return true; return false; };
+  function canonicalPerson(name, aliasIndex) {
+    const k = norm(name);
+    if (!aliasIndex || aliasIndex.has(k)) return k;
+    for (const [canon, set] of aliasIndex) if (set.has(k)) return canon;
+    return k;
+  }
+  function isDuplicate(a, b, aliasIndex) {
+    if (a.type !== b.type) return false;
+    if (a.id && b.id && a.id === b.id) return true;
+    if (a.type === "birthday") {
+      const ka = new Set([norm(a.name), ...(a.aliases || []).map(norm)]);
+      const kb = new Set([norm(b.name), ...(b.aliases || []).map(norm)]);
+      return overlaps(personKeys(a.name, aliasIndex), kb) || overlaps(ka, personKeys(b.name, aliasIndex)) || norm(a.name) === norm(b.name);
+    }
+    const pa = a.people.map((p) => canonicalPerson(p, aliasIndex)).sort().join("|");
+    const pb = b.people.map((p) => canonicalPerson(p, aliasIndex)).sort().join("|");
+    return pa === pb;
+  }
+  function findDuplicate(ev, events, ignoreId) {
+    const idx = buildAliasIndex(events);
+    return events.find((e) => e.id !== ignoreId && isDuplicate(ev, e, idx)) || null;
+  }
+  // Merge an incoming record into an existing one without losing anything.
+  function mergeEvents(existing, incoming) {
+    const out = Object.assign({}, incoming, existing);
+    const extraNames = existing.type === "birthday" && norm(incoming.name) !== norm(existing.name) ? [incoming.name] : [];
+    out.aliases = cleanList([...(existing.aliases || []), ...extraNames, ...(incoming.aliases || [])]);
+    const sameDate = existing.month === incoming.month && existing.day === incoming.day;
+    if (!sameDate && incoming.verified && !existing.verified) {
+      out.month = incoming.month; out.day = incoming.day; out.verified = true;
+      out.note = joinNotes(existing.note, "Date updated from import (was " + formatDayMonth(existing.month, existing.day) + ").");
+    } else {
+      out.verified = existing.verified || (sameDate && incoming.verified);
+      if (!sameDate) out.note = joinNotes(existing.note, "Imported record listed " + formatDayMonth(incoming.month, incoming.day) + ".");
+    }
+    if (!out.relationship && incoming.relationship) out.relationship = incoming.relationship;
+    if (incoming.note && incoming.note !== existing.note) out.note = joinNotes(out.note, incoming.note);
+    out.id = existing.id;
+    return out;
+  }
+  function joinNotes(a, b) {
+    if (!a) return b; if (!b || a.includes(b)) return a; return a + " " + b;
+  }
+
+  /* ---------- Import / export ---------- */
+  function exportData(events, now) {
+    const s = sortEvents(events);
+    return {
+      app: "Royal Gang Celebrations", schemaVersion: SCHEMA_VERSION,
+      exportedAt: (now || new Date()).toISOString(),
+      birthdays: s.filter((e) => e.type === "birthday"),
+      anniversaries: s.filter((e) => e.type === "anniversary"),
+    };
+  }
+  function exportJSON(events, now) {
+    return JSON.stringify(exportData(events, now), null, 2);
+  }
+  // Accepts {birthdays, anniversaries}, {events: [...]}, or a bare array.
+  function parseImport(text) {
+    let data;
+    try { data = typeof text === "string" ? JSON.parse(text) : text; }
+    catch (e) { return { events: [], errors: ["This isn't valid JSON: " + e.message] }; }
+    let raw;
+    if (Array.isArray(data)) raw = data;
+    else if (data && Array.isArray(data.events)) raw = data.events;
+    else if (data && (Array.isArray(data.birthdays) || Array.isArray(data.anniversaries))) {
+      raw = [...(data.birthdays || []).map((b) => Object.assign({ type: "birthday" }, b)),
+             ...(data.anniversaries || []).map((a) => Object.assign({ type: "anniversary" }, a))];
+    } else return { events: [], errors: ["No birthdays or anniversaries found in this file."] };
+    const events = [], errors = [];
+    raw.forEach((r, i) => {
+      const { event, errors: errs } = validateEvent(r);
+      if (event) events.push(event);
+      else errors.push("Record " + (i + 1) + (r && (r.name || r.people) ? " (" + (r.name || [].concat(r.people).join(" & ")) + ")" : "") + ": " + errs.join(" "));
+    });
+    return { events, errors };
+  }
+  // Split imported events into new records and possible duplicates of existing ones.
+  function planImport(existing, incoming) {
+    const plan = { fresh: [], duplicates: [], identical: [] };
+    const pool = existing.slice();
+    for (const ev of incoming) {
+      const dup = findDuplicate(ev, pool);
+      if (!dup) { plan.fresh.push(ev); pool.push(ev); continue; }
+      if (sameContent(dup, ev)) plan.identical.push(ev);
+      else plan.duplicates.push({ incoming: ev, existing: dup });
+    }
+    return plan;
+  }
+  function sameContent(a, b) {
+    const strip = (e) => JSON.stringify(Object.keys(e).filter((k) => k !== "id").sort().map((k) => [k, e[k]]));
+    return strip(a) === strip(b);
+  }
+  // decisions: { [incomingIndex]: "merge" | "both" | "skip" }
+  function applyImport(existing, plan, decisions) {
+    let out = existing.slice();
+    const ids = new Set(out.map((e) => e.id));
+    const add = (ev) => {
+      const e = Object.assign({}, ev);
+      if (!e.id || ids.has(e.id)) e.id = makeId(e, ids);
+      ids.add(e.id); out.push(e);
+    };
+    plan.fresh.forEach(add);
+    plan.duplicates.forEach((d, i) => {
+      const choice = (decisions && decisions[i]) || "skip";
+      if (choice === "merge") out = out.map((e) => (e.id === d.existing.id ? mergeEvents(e, d.incoming) : e));
+      else if (choice === "both") add(d.incoming);
+    });
+    return sortEvents(out);
+  }
+
+  /* ---------- Storage (seed stays read-only; user copy lives under its own key) ---------- */
+  function seedEvents(seed) {
+    return sortEvents([...(seed.birthdays || []).map((b) => Object.assign({ type: "birthday" }, b)),
+                       ...(seed.anniversaries || []).map((a) => Object.assign({ type: "anniversary" }, a))]
+      .map((e) => JSON.parse(JSON.stringify(e))));
+  }
+  const seedVersionOf = (seed) => Number(seed && seed.seedVersion) || 1;
+
+  // Add seed events missing from local data. Never touches existing records (user edits win).
+  // Seed events the user deliberately deleted stay deleted unless includeDeleted is set.
+  function mergeSeed(events, seed, opts) {
+    const o = opts || {};
+    const deleted = new Set(o.includeDeleted ? [] : o.deletedSeedIds || []);
+    const seedById = new Map(seedEvents(seed).map((s) => [s.id, s]));
+    const filled = [], updated = [];
+    // When we know which records the user changed (editedIds), every other seed record takes the
+    // latest seed version, so corrections reach everyone. Without that list (older saves) we only
+    // fill in fields a record lacks. Either way, nothing the user edited is overwritten.
+    const edited = Array.isArray(o.editedIds) ? new Set(o.editedIds) : null;
+    const out = events.map((e) => {
+      const s = seedById.get(e.id);
+      if (!s) return e;
+      if (edited && !edited.has(e.id)) {
+        if (sameContent(e, s)) return e;
+        updated.push(e.id);
+        return s;
+      }
+      const missing = Object.keys(s).filter((k) => !(k in e));
+      if (!missing.length) return e;
+      filled.push(e.id);
+      const copy = Object.assign({}, e);
+      for (const k of missing) copy[k] = s[k];
+      return copy;
+    });
+    const ids = new Set(out.map((e) => e.id));
+    const added = [];
+    for (const s of seedById.values()) {
+      if (ids.has(s.id) || deleted.has(s.id)) continue;
+      if (findDuplicate(s, out)) continue; // same person already entered by hand
+      out.push(s); ids.add(s.id); added.push(s);
+    }
+    return { events: sortEvents(out), added, filled, updated };
+  }
+
+  // Returns { events, source, savedAt, deletedSeedIds, migrated?, error? }.
+  // Saved data from an older (or unversioned) seed is migrated by merging in new seed events.
+  function loadEvents(storage, seed) {
+    const fresh = { events: seedEvents(seed), source: "seed", deletedSeedIds: [] };
+    let data;
+    try {
+      const raw = storage && storage.getItem(STORAGE_KEY);
+      if (!raw) return fresh;
+      data = JSON.parse(raw);
+    } catch (e) {
+      return Object.assign(fresh, { error: "Saved changes couldn't be read, so the original list is shown." });
+    }
+    if (!data || !Array.isArray(data.events)) return Object.assign(fresh, { error: "Saved changes were in an unknown format, so the original list is shown." });
+    const valid = [];
+    for (const e of data.events) { const v = validateEvent(e); if (v.event && v.event.id) valid.push(v.event); }
+    const deletedSeedIds = Array.isArray(data.deletedSeedIds) ? data.deletedSeedIds : [];
+    const editedIds = Array.isArray(data.editedIds) ? data.editedIds : undefined;
+    const result = { events: sortEvents(valid), source: "saved", savedAt: data.savedAt, deletedSeedIds, editedIds: editedIds || [] };
+    if (Number(data.seedVersion) !== seedVersionOf(seed)) {
+      const m = mergeSeed(valid, seed, { deletedSeedIds, editedIds });
+      result.events = m.events;
+      result.migrated = { from: data.seedVersion || null, to: seedVersionOf(seed), added: m.added, filled: m.filled, updated: m.updated };
+    }
+    return result;
+  }
+  function saveEvents(storage, events, opts) {
+    const o = opts instanceof Date ? { now: opts } : opts || {};
+    try {
+      storage.setItem(STORAGE_KEY, JSON.stringify({
+        schemaVersion: SCHEMA_VERSION, seedVersion: o.seedVersion || null,
+        savedAt: (o.now || new Date()).toISOString(),
+        deletedSeedIds: o.deletedSeedIds || [], ...(Array.isArray(o.editedIds) ? { editedIds: o.editedIds } : {}), events: sortEvents(events),
+      }));
+      return true;
+    } catch (e) { return false; }
+  }
+  function restoreSeed(storage, seed) {
+    try { storage && storage.removeItem(STORAGE_KEY); } catch (e) { /* ignore */ }
+    return seedEvents(seed);
+  }
+  function changedIds(before, after) {
+    const prev = new Map(before.map((e) => [e.id, e]));
+    return after.filter((e) => !prev.has(e.id) || !sameContent(prev.get(e.id), e)).map((e) => e.id);
+  }
+
+  // Family grid: each couple (from anniversaries) with both partners' birthday records and their kids.
+  function familyGrid(events) {
+    const idx = buildAliasIndex(events);
+    const byCanon = new Map(events.filter((e) => e.type === "birthday").map((e) => [norm(e.name), e]));
+    const key = (names) => names.map((n) => canonicalPerson(n, idx)).sort().join("|");
+    const families = sortEvents(events.filter((e) => e.type === "anniversary")).map((a) => ({
+      anniversary: a, key: key(a.people),
+      partners: a.people.map((p) => ({ name: p, birthday: byCanon.get(canonicalPerson(p, idx)) || null })),
+      kids: [],
+    }));
+    const famByKey = new Map(families.map((f) => [f.key, f]));
+    const birthdays = sortEvents(events.filter((x) => x.type === "birthday"));
+    // Parents named on a child but with no anniversary yet still form a family (anniversary: null).
+    for (const e of birthdays) {
+      if (!Array.isArray(e.parents) || e.parents.length !== 2) continue;
+      const k = key(e.parents);
+      if (famByKey.has(k)) continue;
+      const f = { anniversary: null, people: e.parents.slice(), key: k,
+        partners: e.parents.map((p) => ({ name: p, birthday: byCanon.get(canonicalPerson(p, idx)) || null })), kids: [] };
+      families.push(f); famByKey.set(k, f);
+    }
+    for (const f of families) if (!f.people) f.people = f.anniversary.people.slice();
+    const inCouple = new Set(families.flatMap((f) => f.partners.map((p) => canonicalPerson(p.name, idx))));
+    const unlinked = [], orphanKids = [];
+    for (const e of birthdays) {
+      if (Array.isArray(e.parents) && e.parents.length) {
+        const f = famByKey.get(key(e.parents));
+        if (f) f.kids.push(e); else orphanKids.push(e);
+      } else if (!inCouple.has(norm(e.name))) unlinked.push(e);
+    }
+    for (const f of families) f.kids.sort((x, y) => displayName(x).localeCompare(displayName(y)));
+    const missing = families.flatMap((f) => f.partners.filter((p) => !p.birthday).map((p) => ({ name: p.name, family: f })));
+    const missingAnniversaries = families.filter((f) => !f.anniversary);
+    return { families, unlinked, orphanKids, missing, missingAnniversaries };
+  }
+
+  // Same collection the screen shows, counted once.
+  function summarize(list) {
+    const birthdays = list.filter((e) => e.type === "birthday").length;
+    return { total: list.length, birthdays, anniversaries: list.length - birthdays };
+  }
+  function counts(events) {
+    const verified = events.filter((e) => e.verified).length;
+    return { total: events.length, verified, unverified: events.length - verified,
+      birthdays: events.filter((e) => e.type === "birthday").length,
+      anniversaries: events.filter((e) => e.type === "anniversary").length };
+  }
+
+  const api = {
+    phon, COMMUNITIES, communitiesOf, greetingsFor, wishText,
+    STORAGE_KEY, SCHEMA_VERSION, MONTHS, DAYS_IN_MONTH, norm,
+    displayName, formatDayMonth, compareEvents, sortEvents, groupByDate, eventsInMonth, monthSummary,
+    currentMonth, daysUntil, relativeLabel, nextCelebration, nextAfterToday, upcoming,
+    buildAliasIndex, matchesQuery, filterEvents, matchedAlias,
+    validateEvent, makeId, isDuplicate, findDuplicate, mergeEvents,
+    exportData, exportJSON, parseImport, planImport, applyImport,
+    changedIds, familyGrid,
+    seedEvents, seedVersionOf, mergeSeed, loadEvents, saveEvents, restoreSeed, counts, summarize,
+  };
+  if (typeof module !== "undefined" && module.exports) module.exports = api;
+  else root.RGC = api;
+})(typeof window !== "undefined" ? window : globalThis);
+</script>
+<script>window.RGC_SEED = {"seedVersion":4,"birthdays":[{"id":"birthday-vihaan","type":"birthday","name":"Vihaan","month":1,"day":9,"aliases":[],"community":"telugu","relationship":"Son of Sateesh and Thara","parents":["Sateesh","Thara"],"verified":true},{"id":"birthday-srujana","type":"birthday","name":"Srujana","month":1,"day":12,"aliases":[],"community":"telugu","relationship":"Wife of Vivek; mother of Anvi and Avyansh","verified":true},{"id":"birthday-shilpa","type":"birthday","name":"Shilpa","month":1,"day":25,"aliases":[],"community":"telugu","relationship":"Wife of Kishore Koneti; mother of Veeksha and Shyam","verified":true},{"id":"birthday-ashritha","type":"birthday","name":"Ashritha","month":1,"day":30,"aliases":["Cherry"],"community":"telugu","relationship":"Daughter of Madhu and Vijetha","parents":["Madhu","Vijetha"],"verified":true,"note":"Some greetings continued on January 31."},{"id":"birthday-venkat","type":"birthday","name":"Venkat","month":2,"day":24,"aliases":["Venky"],"community":"telugu","relationship":"Husband of Soumya; father of Mahanya","verified":true,"note":"Some greetings continued on February 25."},{"id":"birthday-soumya","type":"birthday","name":"Soumya","month":3,"day":2,"aliases":["Soma","Lavanya"],"community":"telugu","relationship":"Wife of Venkat; mother of Mahanya","verified":false,"note":"Identity is confirmed, but historical birthday messages span March 1 and March 2. Confirm the exact date."},{"id":"birthday-veeksha","type":"birthday","name":"Veeksha","month":3,"day":11,"aliases":[],"community":"telugu","relationship":"Daughter of Kishore Koneti and Shilpa","parents":["Kishore Koneti","Shilpa"],"verified":true},{"id":"birthday-krishna","type":"birthday","name":"Krishna","month":3,"day":21,"aliases":["KK","Talaivarae"],"community":"tamil-sourashtra","relationship":"Husband of Rekha; father of Arjun and Prajith","verified":true},{"id":"birthday-shyam","type":"birthday","name":"Shyam","month":4,"day":1,"aliases":[],"community":"telugu","relationship":"Son of Kishore Koneti and Shilpa","parents":["Kishore Koneti","Shilpa"],"verified":true},{"id":"birthday-maggie","type":"birthday","name":"Maggie","month":4,"day":8,"aliases":[],"community":"telugu","relationship":"Daughter of Suresh and Saritha","parents":["Suresh","Saritha"],"verified":false,"note":"Only one annual message cluster was found, spanning April 7 and April 8."},{"id":"birthday-rekha","type":"birthday","name":"Rekha","month":4,"day":8,"aliases":[],"community":"tamil-sourashtra","relationship":"Wife of Krishna; mother of Arjun and Prajith","verified":true},{"id":"birthday-hasnain","type":"birthday","name":"Hasnain","month":4,"day":10,"aliases":["Hasnu"],"community":"muslim","relationship":"Son of Ali and Meenaz","parents":["Ali","Meenaz"],"verified":true},{"id":"birthday-ali","type":"birthday","name":"Ali","month":4,"day":24,"aliases":["Ali Mama"],"community":"muslim","relationship":"Husband of Meenaz; father of Hasnain and Zain","verified":true},{"id":"birthday-anvi","type":"birthday","name":"Anvi","month":4,"day":24,"aliases":[],"community":"telugu","relationship":"Daughter of Vivek and Srujana","parents":["Vivek","Srujana"],"verified":true},{"id":"birthday-meenu","type":"birthday","name":"Meenu","month":5,"day":4,"aliases":[],"community":"tamil","relationship":"Daughter of Subbu and Kanthi","parents":["Subbu","Kanthi"],"verified":true},{"id":"birthday-thara","type":"birthday","name":"Thara","month":5,"day":19,"aliases":["Tara"],"community":"malayali","relationship":"Wife of Sateesh; mother of Apurva and Vihaan","verified":true},{"id":"birthday-suresh","type":"birthday","name":"Suresh","month":5,"day":27,"aliases":[],"community":"telugu","relationship":"Husband of Saritha; father of Misha and Maggie","verified":true},{"id":"birthday-kishore-avengu","type":"birthday","name":"Kishore Avengu","month":6,"day":23,"aliases":[],"community":"telugu","relationship":"Husband of Suneesha; father of Shaarini and SiriNeel","verified":true},{"id":"birthday-vivek","type":"birthday","name":"Vivek","month":6,"day":27,"aliases":[],"community":"telugu","relationship":"Husband of Srujana; father of Anvi and Avyansh","verified":true},{"id":"birthday-subbu","type":"birthday","name":"Subbu","month":7,"day":3,"aliases":[],"community":"tamil","relationship":"Husband of Kanthi; father of Meenu and Bala","verified":true},{"id":"birthday-sateesh","type":"birthday","name":"Sateesh","month":7,"day":5,"aliases":["Satheesh"],"community":"telugu","relationship":"Husband of Thara; father of Apurva and Vihaan","verified":true},{"id":"birthday-yashika","type":"birthday","name":"Yashika","month":7,"day":9,"aliases":[],"community":"telugu","relationship":"Daughter of Bhaskar and Lahari","parents":["Bhaskar","Lahari"],"verified":false,"note":"Historical greetings span July 8 through July 10. Confirm the exact date."},{"id":"birthday-vijetha","type":"birthday","name":"Vijetha","month":7,"day":14,"aliases":[],"community":"telugu","relationship":"Wife of Madhu; mother of Ashritha and Siddu","verified":true},{"id":"birthday-madhu","type":"birthday","name":"Madhu","month":7,"day":19,"aliases":[],"community":"telugu","relationship":"Husband of Vijetha; father of Ashritha and Siddu","verified":true,"note":"July 19 is the strongest recurring date; some earlier greetings occurred July 18."},{"id":"birthday-misha","type":"birthday","name":"Misha","month":7,"day":29,"aliases":[],"community":"telugu","relationship":"Daughter of Suresh and Saritha","parents":["Suresh","Saritha"],"verified":true},{"id":"birthday-zain","type":"birthday","name":"Zain","month":8,"day":16,"aliases":["Zainu","Zainn"],"community":"muslim","relationship":"Son of Ali and Meenaz","parents":["Ali","Meenaz"],"verified":true},{"id":"birthday-siddu","type":"birthday","name":"Siddu","month":8,"day":17,"aliases":["Sidhu"],"community":"telugu","relationship":"Son of Madhu and Vijetha","parents":["Madhu","Vijetha"],"verified":true,"note":"August 17 is the strongest recurring date; some greetings occurred August 16."},{"id":"birthday-arjun","type":"birthday","name":"Arjun","month":8,"day":21,"aliases":[],"community":"tamil-sourashtra","relationship":"Son of Krishna and Rekha","parents":["Krishna","Rekha"],"verified":true},{"id":"birthday-shaarini","type":"birthday","name":"Shaarini","month":9,"day":26,"aliases":["Sharini"],"community":"telugu","relationship":"Daughter of Kishore Avengu and Suneesha","parents":["Kishore Avengu","Suneesha"],"verified":true},{"id":"birthday-mahanya","type":"birthday","name":"Mahanya","month":10,"day":1,"aliases":[],"community":"telugu","relationship":"Daughter of Venkat and Soumya","parents":["Venkat","Soumya"],"verified":true},{"id":"birthday-eshan","type":"birthday","name":"Eshan","month":10,"day":6,"aliases":["Eshaan","Chikki"],"community":"telugu","relationship":"Son of Bhaskar and Lahari","parents":["Bhaskar","Lahari"],"verified":true,"note":"October 6 is the strongest recurring date; some greetings occurred October 5."},{"id":"birthday-prajith","type":"birthday","name":"Prajith","month":10,"day":8,"aliases":["Prajeet"],"community":"tamil-sourashtra","relationship":"Son of Krishna and Rekha","parents":["Krishna","Rekha"],"verified":true},{"id":"birthday-meenaz","type":"birthday","name":"Meenaz","month":10,"day":11,"aliases":["Menaz","Meenu Bhabhi"],"community":"muslim","relationship":"Wife of Ali; mother of Hasnain and Zain","verified":true},{"id":"birthday-bala","type":"birthday","name":"Bala","month":10,"day":19,"aliases":["Captain"],"community":"tamil","relationship":"Son of Subbu and Kanthi","parents":["Subbu","Kanthi"],"verified":true},{"id":"birthday-apurva","type":"birthday","name":"Apurva","month":11,"day":11,"aliases":["Apoorva","Appu"],"community":"telugu","relationship":"Daughter of Sateesh and Thara","parents":["Sateesh","Thara"],"verified":true},{"id":"birthday-bhaskar","type":"birthday","name":"Bhaskar","month":11,"day":15,"aliases":["Bachi","Baachi"],"community":"telugu","relationship":"Husband of Lahari; father of Yashika and Eshan","verified":true},{"id":"birthday-kanthi","type":"birthday","name":"Kanthi","month":11,"day":19,"aliases":[],"community":"tamil","relationship":"Wife of Subbu; mother of Meenu and Bala","verified":true},{"id":"birthday-lahari","type":"birthday","name":"Lahari","month":12,"day":9,"aliases":["Rajitha"],"community":"telugu","relationship":"Wife of Bhaskar; mother of Yashika and Eshan","verified":true},{"id":"birthday-avyansh","type":"birthday","name":"Avyansh","month":12,"day":27,"aliases":["Avyu","Avyaansh"],"community":"telugu","relationship":"Son of Vivek and Srujana","parents":["Vivek","Srujana"],"verified":true},{"id":"birthday-kishore-koneti","type":"birthday","name":"Kishore Koneti","month":12,"day":29,"aliases":["Kishore Kumar","Buddy"],"community":"telugu","relationship":"Husband of Shilpa; father of Veeksha and Shyam","verified":true}],"anniversaries":[{"id":"anniversary-ali-meenaz","type":"anniversary","people":["Ali","Meenaz"],"month":1,"day":5,"aliases":["Ali & Meenu"],"verified":true},{"id":"anniversary-venkat-soumya","type":"anniversary","people":["Venkat","Soumya"],"month":2,"day":13,"aliases":["Venky & Soma","Venkat & Lavanya"],"verified":true},{"id":"anniversary-bhaskar-lahari","type":"anniversary","people":["Bhaskar","Lahari"],"month":5,"day":29,"aliases":["Bhaskar & Rajitha","Bachi & Lahari"],"verified":true},{"id":"anniversary-kishore-koneti-shilpa","type":"anniversary","people":["Kishore Koneti","Shilpa"],"month":6,"day":7,"aliases":["Buddy & Shilpa","Kishore Kumar & Shilpa"],"verified":true},{"id":"anniversary-subbu-kanthi","type":"anniversary","people":["Subbu","Kanthi"],"month":11,"day":2,"aliases":[],"verified":false,"note":"Only one annual anniversary cluster was found. Confirm the date."},{"id":"anniversary-krishna-rekha","type":"anniversary","people":["Krishna","Rekha"],"month":11,"day":18,"aliases":["KK & Rekha"],"verified":true},{"id":"anniversary-vivek-srujana","type":"anniversary","people":["Vivek","Srujana"],"month":11,"day":18,"aliases":[],"verified":true},{"id":"anniversary-kishore-avengu-suneesha","type":"anniversary","people":["Kishore Avengu","Suneesha"],"month":11,"day":25,"aliases":[],"verified":true},{"id":"anniversary-madhu-vijetha","type":"anniversary","people":["Madhu","Vijetha"],"month":12,"day":5,"aliases":[],"verified":false,"note":"Only one annual anniversary cluster was found. Confirm the date."},{"id":"anniversary-sateesh-thara","type":"anniversary","people":["Sateesh","Thara"],"month":12,"day":15,"aliases":["Sateesh & Tara"],"verified":true,"note":"Date was confirmed directly by Sateesh. It was absent from the WhatsApp wishes."}]};</script>
+<script>
+{
+const R = window.RGC, SEED = window.RGC_SEED;
+const $ = (s, el = document) => el.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const ico = (n, cls = "i") => `<svg class="${cls}" aria-hidden="true"><use href="#i-${n}"/></svg>`;
+const MON3 = R.MONTHS.map((m) => m.slice(0, 3));
+const WD = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+let store = null;
+try { store = window.localStorage; store.getItem("probe"); } catch (e) { store = null; }
+
+const loaded = R.loadEvents(store, SEED);
+const S = {
+  events: loaded.events, source: loaded.source, savedAt: loaded.savedAt, loadError: loaded.error,
+  deletedSeedIds: loaded.deletedSeedIds || [], editedIds: loaded.editedIds || [], migrated: loaded.migrated || null,
+  today: new Date(), month: 0, filter: "all", view: "month", query: "", mfilter: "all", mq: "",
+  storageOk: !!store, dl: null, undo: null,
+};
+S.month = R.currentMonth(S.today);
+const SEED_IDS = new Set(R.seedEvents(SEED).map((e) => e.id));
+const SEED_VERSION = R.seedVersionOf(SEED);
+const SEED_BY_ID = new Map(R.seedEvents(SEED).map((e) => [e.id, JSON.stringify(e, Object.keys(e).sort())]));
+const sameAsSeed = (e) => SEED_BY_ID.get(e.id) === JSON.stringify(e, Object.keys(e).sort());
+// Save after a change, remembering which bundled records the user has changed so seed updates never overwrite them.
+function commit(before) {
+  const changed = R.changedIds(before, S.events).filter((id) => SEED_BY_ID.has(id) && !sameAsSeed(S.events.find((e) => e.id === id)));
+  S.editedIds = [...new Set([...S.editedIds, ...changed])];
+  persist();
+}
+
+/* ---------- helpers ---------- */
+function occThisYear(ev) {
+  const y = S.today.getFullYear();
+  const leap = (y % 4 === 0 && y % 100 !== 0) || y % 400 === 0;
+  return new Date(y, ev.month - 1, ev.month === 2 && ev.day === 29 && !leap ? 28 : ev.day);
+}
+function whenLabel(ev) {
+  const days = R.daysUntil(ev, S.today);
+  const t0 = new Date(S.today.getFullYear(), S.today.getMonth(), S.today.getDate());
+  if (days > 0 && occThisYear(ev) < t0) return { text: ev.month === S.today.getMonth() + 1 ? "Earlier this month" : "Earlier this year", days };
+  return { text: R.relativeLabel(days), days };
+}
+function hl(text) {
+  const q = S.query.trim();
+  if (!q) return esc(text);
+  const i = R.norm(text).indexOf(R.norm(q));
+  if (i < 0 || R.norm(text).length !== text.length) return esc(text);
+  return esc(text.slice(0, i)) + "<mark>" + esc(text.slice(i, i + q.length)) + "</mark>" + esc(text.slice(i + q.length));
+}
+function persist() {
+  S.storageOk = R.saveEvents(store, S.events, { seedVersion: SEED_VERSION, deletedSeedIds: S.deletedSeedIds, editedIds: S.editedIds });
+  if (S.storageOk) { S.source = "saved"; S.savedAt = new Date().toISOString(); }
+  else toast("This browser blocked saving. Export your data so you don't lose changes.");
+}
+function toast(msg, action) {
+  const box = $("#toasts");
+  const el = document.createElement("div");
+  el.className = "toast";
+  el.innerHTML = `<span>${esc(msg)}</span>${action ? `<button type="button">${esc(action.label)}</button>` : ""}`;
+  if (action) el.querySelector("button").addEventListener("click", () => { action.run(); el.remove(); });
+  box.append(el);
+  setTimeout(() => el.remove(), action ? 7000 : 4000);
+}
+
+/* ---------- garland ---------- */
+function drawGarland() {
+  const g = $("#garland");
+  const W = g.clientWidth || 1000, n = Math.max(8, Math.round(W / 30));
+  let s = "";
+  for (let i = 0; i < n; i++) {
+    const x = (i + 0.5) * (W / n);
+    s += i % 2 ? `<use href="#i-mango" x="${x - 6}" y="8" width="12" height="24"/>` : `<use href="#i-flower" x="${x - 9}" y="3" width="18" height="18"/>`;
+  }
+  g.setAttribute("viewBox", `0 0 ${W} 34`);
+  g.innerHTML = `<line x1="0" y1="12" x2="${W}" y2="12" stroke="#2f7d3c" stroke-width="1.6"/>` + s;
+}
+function drawRangoli() {
+  // A simple 8-fold rangoli: outer petals in rani pink, inner in marigold, kolam dots between.
+  const PETAL = "M0 0C-9-8-9-22 0-30 9-22 9-8 0 0Z";
+  const ring = (n, r, scale, fill, rot = 0) => Array.from({ length: n }, (_, i) =>
+    `<path d="${PETAL}" fill="${fill}" transform="rotate(${(360 / n) * i + rot}) translate(0 ${-r}) scale(${scale})"/>`).join("");
+  const dots = Array.from({ length: 16 }, (_, i) => { const a = (Math.PI * 2 * i) / 16; return `<circle cx="${(86 * Math.cos(a)).toFixed(1)}" cy="${(86 * Math.sin(a)).toFixed(1)}" r="3" fill="#fff" opacity=".8"/>`; }).join("");
+  $("#rangoli").innerHTML = `<circle r="92" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="1.5" stroke-dasharray="2 6"/>${dots}
+    ${ring(8, 30, 1.6, "#d6246e", 0)}${ring(8, 22, 1.15, "#7b1fa2", 22.5)}${ring(8, 8, .8, "#f2a20c", 0)}
+    <circle r="12" fill="#fff"/><circle r="7" fill="#d6246e"/><circle r="3" fill="#f7c04a"/>`;
+}
+drawRangoli();
+const garlandRO = new ResizeObserver(drawGarland);
+garlandRO.observe($("#garland"));
+
+/* ---------- header + hero ---------- */
+function renderHero() {
+  $("#todayDate").textContent = S.today.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric", year: "numeric" });
+  const next = R.nextCelebration(S.events, S.today);
+  const box = $("#heroInner");
+  if (!next) { box.innerHTML = `<div class="hero-text"><p class="eyebrow">No celebrations yet</p><h2>Add the first birthday or anniversary</h2><a class="btn primary" href="#manage">Manage events</a></div>`; return; }
+  const first = next.events[0];
+  const date = new Date(S.today.getFullYear(), S.today.getMonth(), S.today.getDate() + next.days);
+  const isBd = next.events.every((e) => e.type === "birthday");
+  const who = next.events.map((e) => esc(R.displayName(e))).join(" · ");
+  const kinds = [...new Set(next.events.map((e) => (e.type === "birthday" ? "Birthday" : "Wedding anniversary")))].join(" & ");
+  box.innerHTML = `
+    <div class="calpage ${isBd ? "bd" : ""}" aria-hidden="true">
+      <div class="mo">${R.MONTHS[first.month - 1]}</div>
+      <div class="dn">${first.day}</div>
+      <div class="wd">${WD[date.getDay()]}</div>
+    </div>
+    <div class="hero-text">
+      <p class="eyebrow">${next.days === 0 ? "Today we celebrate" : "Next celebration"}</p>
+      <h2>${who}</h2>
+      <div class="meta">
+        <span class="pill solid">${esc(R.relativeLabel(next.days))}</span>
+        <span class="pill soft">${ico(isBd ? "cake" : "rings")}${esc(kinds)}</span>
+        <span class="pill soft">${R.formatDayMonth(first.month, first.day)}</span>
+      </div>
+      ${wishHTML(next.events)}
+    </div>`;
+}
+
+function wishHTML(list) {
+  const lines = [];
+  const seen = new Set();
+  for (const ev of list) for (const g of R.greetingsFor(ev, S.events)) {
+    if (seen.has(g.text)) continue; seen.add(g.text);
+    lines.push(`<span lang="${g.lang}" dir="${g.dir}">${esc(g.text)}</span><small>${esc(g.roman)}</small>`);
+  }
+  if (!lines.length) return "";
+  return `<p class="wish">${lines.join("")}</p>`;
+}
+
+/* ---------- calendar ---------- */
+function cardHTML(ev) {
+  const bd = ev.type === "birthday";
+  const w = whenLabel(ev);
+  const name = R.displayName(ev);
+  return `<article class="card ${bd ? "bd" : "an"} ${w.days === 0 ? "is-today" : ""}">
+    <div class="ico" aria-hidden="true">${ico(bd ? "cake" : "rings")}</div>
+    <div>
+      <p class="kind">${bd ? "Birthday" : "Wedding anniversary"} · ${R.formatDayMonth(ev.month, ev.day)}</p>
+      <h3>${hl(name)}</h3>
+      ${(() => { const m = R.matchedAlias(ev, S.query, S.events); return m ? `<p class="aka">Found by “<mark>${esc(m)}</mark>”</p>` : ""; })()}
+      ${greetHTML(ev)}
+    </div>
+    <div class="side">
+      <span class="when ${w.days <= 1 ? "hot" : ""}">${esc(w.text)}</span>
+      <button class="btn ghost sm" data-edit="${esc(ev.id)}" aria-label="Edit ${esc(name)}">Edit</button>
+    </div>
+  </article>`;
+}
+function commHTML(ev) {
+  return R.communitiesOf(ev, S.events).map((k) => { const c = R.COMMUNITIES[k]; return `<span class="comm c-${k}" title="${esc(c.region)}">${esc(c.label)}${c.region ? " · " + esc(c.region) : ""}</span>`; }).join("");
+}
+function greetHTML(ev) {
+  const g = R.greetingsFor(ev, S.events);
+  return g.length ? `<p class="greet">${g.map((x) => `<span lang="${x.lang}" dir="${x.dir}">${esc(x.text)}</span>`).join("")}<i>${esc(g.map((x) => x.roman).join(" · "))}</i></p>` : "";
+}
+function emptyHTML(title, msg) {
+  return `<div class="empty">
+    <svg viewBox="0 0 150 110" aria-hidden="true">
+      <rect x="40" y="46" width="70" height="52" rx="6" fill="var(--an-bg)"/><rect x="34" y="34" width="82" height="16" rx="5" fill="var(--an-mark)" opacity=".85"/>
+      <rect x="69" y="34" width="12" height="64" fill="var(--bd-mark)"/><path d="M75 34c-10-16-26-12-20-2 3 4 12 3 20 2Zm0 0c10-16 26-12 20-2-3 4-12 3-20 2Z" fill="var(--bd-mark)"/>
+      <use href="#i-flower" x="10" y="80" width="18" height="18"/><use href="#i-flower" x="122" y="78" width="16" height="16"/><use href="#i-leaf" x="24" y="88" width="14" height="10"/>
+    </svg>
+    <h3>${esc(title)}</h3><p>${esc(msg)}</p>
+    ${S.filter !== "all" || S.query ? `<button class="btn" data-act="clear">Show all events</button>` : ""}
+  </div>`;
+}
+const FILTER_LABEL = { birthday: "Birthdays only", anniversary: "Wedding anniversaries only", unverified: "Needs confirmation only" };
+// Shows every active filter so nothing narrows the list invisibly.
+function filterStatus() {
+  const parts = [];
+  if (S.filter !== "all") parts.push(`<span class="fpill">${esc(FILTER_LABEL[S.filter])} <button type="button" data-act="clear-filter" aria-label="Remove filter ${esc(FILTER_LABEL[S.filter])}">×</button></span>`);
+  if (S.query.trim()) parts.push(`<span class="fpill">Search: “${esc(S.query.trim())}” <button type="button" data-act="clear-search" aria-label="Clear search">×</button></span>`);
+  if (!parts.length) return "";
+  return `<div class="fstatus" role="status"><span>Filtered:</span>${parts.join("")}<button type="button" class="btn sm ghost" data-act="clear">Show all</button></div>`;
+}
+function countText(list) {
+  const c = R.summarize(list);
+  return `${c.birthdays} birthday${c.birthdays === 1 ? "" : "s"} · ${c.anniversaries} anniversar${c.anniversaries === 1 ? "y" : "ies"}`;
+}
+function renderMonth() {
+  const searching = !!S.query.trim();
+  const list = R.filterEvents(S.events, { filter: S.filter, query: S.query, month: searching ? null : S.month });
+  const summary = countText(list);
+  const head = (searching
+    ? `<div class="section-head"><h2>Matches for “${esc(S.query.trim())}”</h2><p id="countLine">Across all months · ${summary}</p></div>`
+    : `<div class="section-head"><h2>${R.MONTHS[S.month - 1]}</h2><p id="countLine">${summary}</p></div>`) + filterStatus();
+  if (!list.length) {
+    const fname = { birthday: "birthdays", anniversary: "wedding anniversaries", unverified: "events needing confirmation", all: "celebrations" }[S.filter];
+    return head + (searching
+      ? emptyHTML("No one matches that name", "Try a nickname or a shorter spelling — search covers aliases too.")
+      : emptyHTML(`No ${fname} in ${R.MONTHS[S.month - 1]}`, "A quiet month. Use the arrows to see what's coming next."));
+  }
+  return head + R.groupByDate(list).map((g) => {
+    const w = whenLabel(g.events[0]);
+    const wd = WD[occThisYear(g.events[0]).getDay()];
+    return `<section class="day ${w.days === 0 ? "is-today" : ""}" aria-label="${R.formatDayMonth(g.month, g.day)}">
+      <header class="dh"><span class="dnum">${g.day}</span><b>${R.MONTHS[g.month - 1]}</b><span>${wd}${w.days === 0 ? " · today" : ""}</span></header>
+      <div class="cards">${g.events.map(cardHTML).join("")}</div>
+    </section>`;
+  }).join("");
+}
+function renderYear() {
+  const list = R.filterEvents(S.events, { filter: S.filter, query: S.query });
+  const cur = R.currentMonth(S.today);
+  const tiles = R.monthSummary(list).map((m) => {
+    const all = [...m.birthdays, ...m.anniversaries].sort(R.compareEvents);
+    return `<button class="mtile ${m.month === cur ? "cur" : ""}" data-month="${m.month}" aria-label="${m.name}: ${m.total} celebration${m.total === 1 ? "" : "s"}. Open month">
+      <header><h3>${m.name}</h3><span class="count">${m.total} · ${m.birthdays.length} ${ico("cake")} ${m.anniversaries.length} ${ico("rings")}</span></header>
+      ${all.length ? `<ul>${all.map((e) => `<li class="${e.type === "birthday" ? "bd" : "an"}"><b>${e.day}</b>${ico(e.type === "birthday" ? "cake" : "rings")}<span>${esc(R.displayName(e))}</span></li>`).join("")}</ul>` : `<p class="none">No celebrations</p>`}
+    </button>`;
+  }).join("");
+  const head = `<div class="section-head"><h2>${S.today.getFullYear()} at a glance</h2><p id="countLine">${list.length} celebrations · ${countText(list)} · tap a month to open it</p></div>` + filterStatus();
+  return head + (list.length ? `<div class="year">${tiles}</div>` : emptyHTML("Nothing matches these filters", "Clear the search or pick another filter."));
+}
+function renderCalendar() {
+  for (const b of document.querySelectorAll("#filters .chip")) b.setAttribute("aria-pressed", b.dataset.f === S.filter);
+  for (const b of document.querySelectorAll(".seg button")) b.setAttribute("aria-pressed", b.dataset.v === S.view);
+  $("#monthSel").value = S.month;
+  $("#monthNav").style.visibility = S.view === "month" ? "" : "hidden";
+  const bn = [];
+  if (S.loadError) bn.push(S.loadError);
+  if (S.migrated && (S.migrated.added.length || (S.migrated.updated || []).length)) {
+    const a = S.migrated.added.length, u = (S.migrated.updated || []).length;
+    bn.push(`The bundled list was updated: ${[a ? `${a} event${a === 1 ? "" : "s"} added` : "", u ? `${u} corrected` : ""].filter(Boolean).join(", ")}. Your own edits were kept.`);
+  }
+  if (!S.storageOk) bn.push("This browser isn't saving changes (private mode or storage blocked). Export a backup from Manage events.");
+  $("#banner").innerHTML = bn.map((t) => `<div class="banner">${ico("alert")}<span>${esc(t)}</span></div>`).join("");
+  $("#content").innerHTML = S.view === "year" ? renderYear() : renderMonth();
+}
+
+/* ---------- manage ---------- */
+function renderManage() {
+  const c = R.counts(S.events);
+  $("#mstats").innerHTML = [
+    ["", c.total, "Total events"], ["ok", c.verified, "Verified"], ["warn", c.unverified, "Needs confirmation"],
+    ["", c.birthdays, "Birthdays"], ["", c.anniversaries, "Anniversaries"],
+  ].map(([k, n, l]) => `<div class="stat ${k}"><b>${n}</b><span>${l}</span></div>`).join("");
+  renderFamilies();
+  for (const b of document.querySelectorAll("#mfilters .chip")) b.setAttribute("aria-pressed", b.dataset.f === S.mfilter);
+  const list = R.filterEvents(S.events, { filter: S.mfilter, query: S.mq });
+  $("#mlist").innerHTML = list.length ? `<table class="stack"><thead><tr><th>Date</th><th>Name</th><th>Type</th><th>Status</th><th><span class="sr">Actions</span></th></tr></thead><tbody>${list.map((e) => {
+    const bd = e.type === "birthday", name = R.displayName(e);
+    return `<tr><td class="date">${MON3[e.month - 1]} ${e.day}</td>
+      <td><strong>${esc(name)}</strong>${e.aliases.length ? `<div class="aka">aka ${esc(e.aliases.join(", "))}</div>` : ""}${e.relationship ? `<div class="aka">${esc(e.relationship)}</div>` : ""}<div>${commHTML(e)}</div></td>
+      <td><span class="typetag ${bd ? "bd" : "an"}">${ico(bd ? "cake" : "rings")}${bd ? "Birthday" : "Anniversary"}</span></td>
+      <td>${e.verified ? `<span class="badge ok">${ico("check")}Verified</span>` : `<span class="badge warn">${ico("alert")}Needs confirmation</span>`}</td>
+      <td><div class="acts">
+        <button class="btn ghost sm" data-verify="${esc(e.id)}">${e.verified ? "Mark unverified" : "Mark verified"}</button>
+        <button class="btn ghost sm" data-edit="${esc(e.id)}" aria-label="Edit ${esc(name)}">Edit</button>
+        <button class="btn ghost sm" data-del="${esc(e.id)}" aria-label="Delete ${esc(name)}">Delete</button>
+      </div></td></tr>`;
+  }).join("")}</tbody></table>` : `<div class="empty"><h3>No events match</h3><p>Try another search or filter.</p></div>`;
+  $("#savedInfo").textContent = S.source === "saved"
+    ? `Your edited list is saved in this browser${S.savedAt ? " (last saved " + new Date(S.savedAt).toLocaleString() + ")" : ""}. Other people and devices won't see these changes — export JSON to share them.`
+    : "Showing the original list. Any change you make is saved in this browser.";
+  $("#savedInfo").textContent += ` Seed data version ${SEED_VERSION} · ${R.seedEvents(SEED).length} bundled events.`;
+}
+
+function renderFamilies() {
+  const g = R.familyGrid(S.events);
+  const md = (e) => `${MON3[e.month - 1]} ${e.day}`;
+  const person = (e, label) => `<li><button class="linkbtn" data-edit="${esc(e.id)}">${esc(e.name)}</button><span>${label ? label + " · " : ""}${md(e)}</span></li>`;
+  const gaps = [g.missing.length ? `${g.missing.length} birthday${g.missing.length === 1 ? "" : "s"} missing` : "",
+    g.missingAnniversaries.length ? `${g.missingAnniversaries.length} anniversar${g.missingAnniversaries.length === 1 ? "y" : "ies"} missing` : ""].filter(Boolean);
+  $("#famSummary").textContent = `${g.families.length} couples · ${g.families.reduce((n, f) => n + f.kids.length, 0)} kids linked · ` + (gaps.length ? gaps.join(" · ") : "nothing missing");
+  $("#famGrid").innerHTML = g.families.map((f) => {
+    const gap = f.partners.some((p) => !p.birthday) || !f.anniversary;
+    return `<article class="fam ${gap ? "gap" : ""}">
+      <h3>${esc(f.people.join(" & "))}</h3>
+      ${f.anniversary
+        ? `<p class="ann">${ico("rings")} Anniversary · <button class="linkbtn" data-edit="${esc(f.anniversary.id)}">${R.formatDayMonth(f.anniversary.month, f.anniversary.day)}</button></p>`
+        : `<p class="ann miss">${ico("rings")} Anniversary missing <button class="btn sm" data-addann="${esc(f.people.join("|"))}">Add</button></p>`}
+      <ul>${f.partners.map((p) => p.birthday ? person(p.birthday) : `<li><span>${esc(p.name)}</span><span class="miss">Birthday missing <button class="btn sm" data-addperson="${esc(p.name)}" data-partner="${esc(f.partners.find((x) => x !== p).name)}">Add</button></span></li>`).join("")}</ul>
+      <p class="lbl">Kids</p>
+      ${f.kids.length ? `<ul>${f.kids.map((k) => person(k)).join("")}</ul>` : `<p class="aka">None linked yet. Edit a child and choose “Child of”.</p>`}
+    </article>`;
+  }).join("");
+  const loose = [...g.orphanKids, ...g.unlinked];
+  $("#famUnlinked").innerHTML = loose.length ? `<p class="lbl" style="margin-top:4px">Not linked to a family yet (${loose.length}) — tap a name to set “Child of”</p>
+    <div class="unl">${loose.map((e) => `<button class="chip" data-edit="${esc(e.id)}">${esc(e.name)} <span class="aka">${md(e)}</span></button>`).join("")}</div>` : "";
+}
+
+/* ---------- routing ---------- */
+function route() {
+  const h = location.hash.replace("#", "");
+  const manage = h === "manage";
+  if (!manage) S.view = h === "year" ? "year" : "month";
+  $("#calendarView").hidden = manage;
+  $("#manageView").hidden = !manage;
+  $("#hero").hidden = manage; $("#garlandWrap").hidden = manage;
+  $("#tabCal").toggleAttribute("aria-current", !manage); if (!manage) $("#tabCal").setAttribute("aria-current", "page");
+  $("#tabManage").toggleAttribute("aria-current", manage); if (manage) $("#tabManage").setAttribute("aria-current", "page");
+  renderAll();
+}
+function setHash(h) {
+  if (location.hash.replace("#", "") === h) { route(); return; }
+  if (h) location.hash = h;
+  else { history.replaceState(null, "", location.pathname + location.search); route(); }
+}
+function renderAll() {
+  renderHero();
+  if ($("#manageView").hidden) renderCalendar(); else renderManage();
+}
+
+/* ---------- dialogs ---------- */
+const dlg = $("#dlg");
+function openDialog(html) {
+  dlg.innerHTML = html;
+  if (!dlg.open) dlg.showModal();
+  const f = dlg.querySelector("[autofocus]") || dlg.querySelector("input,select,textarea,button");
+  f && f.focus();
+}
+function closeDialog() { if (dlg.open) dlg.close(); }
+dlg.addEventListener("click", (e) => { if (e.target === dlg) closeDialog(); });
+function confirmBox({ title, body, ok = "Confirm", danger = false }) {
+  return new Promise((resolve) => {
+    openDialog(`<form class="dlg" method="dialog"><h2 id="dlgTitle">${esc(title)}</h2><p>${body}</p>
+      <div class="foot"><button class="btn" value="no" autofocus>Cancel</button><button class="btn ${danger ? "danger" : "primary"}" value="yes">${esc(ok)}</button></div></form>`);
+    dlg.addEventListener("close", () => resolve(dlg.returnValue === "yes"), { once: true });
+  });
+}
+
+function eventForm(ev, type, preset) {
+  const isNew = !ev;
+  const t = ev ? ev.type : type;
+  const e = ev || Object.assign({ type: t, month: S.month, day: 1, aliases: [], verified: true }, preset || {});
+  const couples = R.familyGrid(S.events).families;
+  const parentKey = (e.parents || []).join("|");
+  const bd = t === "birthday";
+  openDialog(`<form class="dlg" id="evForm" novalidate>
+    <h2 id="dlgTitle">${isNew ? (bd ? "Add birthday" : "Add wedding anniversary") : "Edit " + esc(R.displayName(e))}</h2>
+    <div class="errors" id="fErr" hidden></div>
+    ${bd
+      ? `<div class="field"><label for="fName">Name</label><input id="fName" name="name" value="${esc(e.name || "")}" autofocus required><small>Use the canonical name. Put nicknames in aliases.</small></div>`
+      : `<div class="two"><div class="field"><label for="fP1">Partner 1</label><input id="fP1" name="p1" value="${esc(e.people?.[0] || "")}" autofocus required></div>
+         <div class="field"><label for="fP2">Partner 2</label><input id="fP2" name="p2" value="${esc(e.people?.[1] || "")}" required></div></div>`}
+    <div class="two">
+      <div class="field"><label for="fMonth">Month</label><select id="fMonth" name="month">${R.MONTHS.map((m, i) => `<option value="${i + 1}" ${e.month === i + 1 ? "selected" : ""}>${m}</option>`).join("")}</select></div>
+      <div class="field"><label for="fDay">Day</label><input id="fDay" name="day" type="number" inputmode="numeric" min="1" max="31" value="${e.day}" required></div>
+    </div>
+    <div class="field"><label for="fAliases">Aliases</label><input id="fAliases" name="aliases" value="${esc((e.aliases || []).join(", "))}"><small>Comma-separated nicknames or spellings${bd ? "" : ", e.g. “Venky & Soma”"}.</small></div>
+    ${bd ? `<div class="field"><label for="fComm">Community</label><select id="fComm" name="community"><option value="">Not set</option>${Object.entries(R.COMMUNITIES).map(([k, c]) => `<option value="${k}" ${e.community === k ? "selected" : ""}>${esc(c.label)}${c.region ? " — " + esc(c.region) : ""}</option>`).join("")}</select><small>Sets the language of their greeting. Anniversaries use both partners'.</small></div>` : ""}
+    ${bd ? `<div class="field"><label for="fParents">Child of</label><select id="fParents" name="parents"><option value="">Not a child in the group</option>${couples.map((c) => { const k = c.people.join("|"); const rev = [...c.people].reverse().join("|"); return `<option value="${esc(k)}" ${parentKey === k || parentKey === rev ? "selected" : ""}>${esc(c.people.join(" & "))}</option>`; }).join("")}</select></div>` : ""}
+    <div class="field"><label for="fRel">Relationship</label><input id="fRel" name="relationship" value="${esc(e.relationship || "")}" placeholder="${bd ? "e.g. Wife of Venkat" : "Optional"}"></div>
+    <div class="field"><label for="fNote">Notes</label><textarea id="fNote" name="note">${esc(e.note || "")}</textarea></div>
+    <label class="check"><input type="checkbox" name="verified" ${e.verified ? "checked" : ""}> Date is verified</label>
+    <div id="fDup"></div>
+    <div class="foot">
+      ${isNew ? "" : `<button type="button" class="btn ghost" data-del="${esc(e.id)}" style="margin-right:auto">Delete</button>`}
+      <button type="button" class="btn" data-act="close">Cancel</button>
+      <button type="submit" class="btn primary">${isNew ? "Add" : "Save changes"}</button>
+    </div>
+  </form>`);
+  const form = $("#evForm");
+  let force = false;
+  form.addEventListener("submit", (sub) => {
+    sub.preventDefault();
+    const fd = new FormData(form);
+    const raw = Object.assign({}, e, {
+      type: t, month: fd.get("month"), day: fd.get("day"), aliases: fd.get("aliases"),
+      relationship: fd.get("relationship"), note: fd.get("note"), verified: fd.get("verified") === "on",
+    });
+    if (bd) {
+      raw.name = fd.get("name");
+      if (fd.get("community")) raw.community = fd.get("community"); else delete raw.community;
+      if (fd.get("parents")) { raw.parents = fd.get("parents").split("|"); if (!String(raw.relationship || "").trim()) raw.relationship = "Child of " + raw.parents.join(" and "); }
+      else delete raw.parents;
+    }
+    else raw.people = [fd.get("p1"), fd.get("p2")];
+    const { event, errors } = R.validateEvent(raw);
+    const errBox = $("#fErr");
+    if (errors.length) { errBox.hidden = false; errBox.innerHTML = `<strong>Please fix:</strong><ul>${errors.map((x) => `<li>${esc(x)}</li>`).join("")}</ul>`; errBox.scrollIntoView({ block: "nearest" }); return; }
+    errBox.hidden = true;
+    const dup = R.findDuplicate(event, S.events, isNew ? undefined : e.id);
+    if (dup && !force) {
+      $("#fDup").innerHTML = `<div class="errors"><strong>This looks like an existing record:</strong> ${esc(R.displayName(dup))} (${R.formatDayMonth(dup.month, dup.day)}${dup.verified ? ", verified" : ""}).
+        <div class="row" style="margin-top:8px"><button type="button" class="btn sm" data-edit="${esc(dup.id)}">Edit that one instead</button><button type="button" class="btn sm" id="saveAnyway">Save as a separate person</button></div></div>`;
+      $("#saveAnyway").addEventListener("click", () => { force = true; form.requestSubmit(); });
+      return;
+    }
+    const before = S.events;
+    if (isNew) {
+      event.id = R.makeId(event, new Set(S.events.map((x) => x.id)));
+      S.events = R.sortEvents([...S.events, event]);
+    } else {
+      S.events = R.sortEvents(S.events.map((x) => (x.id === e.id ? event : x)));
+    }
+    commit(before); closeDialog(); renderAll();
+    toast(`${isNew ? "Added" : "Saved"} ${R.displayName(event)} · ${R.formatDayMonth(event.month, event.day)}`);
+  });
+}
+
+async function deleteEvent(id) {
+  const ev = S.events.find((e) => e.id === id);
+  if (!ev) return;
+  const ok = await confirmBox({ title: "Delete this celebration?", body: `<strong>${esc(R.displayName(ev))}</strong> — ${R.formatDayMonth(ev.month, ev.day)} will be removed from the calendar.`, ok: "Delete", danger: true });
+  if (!ok) return;
+  const before = S.events, beforeDel = S.deletedSeedIds;
+  S.events = S.events.filter((e) => e.id !== id);
+  if (SEED_IDS.has(id)) S.deletedSeedIds = [...new Set([...S.deletedSeedIds, id])];
+  persist(); renderAll();
+  toast(`Deleted ${R.displayName(ev)}`, { label: "Undo", run: () => { S.events = before; S.deletedSeedIds = beforeDel; persist(); renderAll(); } });
+}
+
+/* ---------- export / import ---------- */
+const fileName = () => `royal-gang-celebrations-${new Date().toISOString().slice(0, 10)}.json`;
+async function exportDownload() {
+  const data = R.exportJSON(S.events);
+  if (S.dl) {
+    try { await S.dl.save({ filename: fileName(), data }); toast("Export ready."); }
+    catch (e) { toast("Download didn't happen. Use Copy JSON instead."); }
+    return;
+  }
+  try {
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([data], { type: "application/json" }));
+    a.download = fileName(); document.body.append(a); a.click(); a.remove();
+    setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+  } catch (e) { showJSON(data); }
+}
+function showJSON(data) {
+  openDialog(`<div class="dlg"><h2 id="dlgTitle">Your data as JSON</h2><p>Select all and copy it somewhere safe.</p>
+    <textarea class="mono" rows="12" readonly style="width:100%;border:1.5px solid var(--line);border-radius:12px;padding:10px;background:var(--surface)">${esc(data)}</textarea>
+    <div class="foot"><button class="btn primary" data-act="close">Done</button></div></div>`);
+  const ta = dlg.querySelector("textarea"); ta.focus(); ta.select();
+}
+async function exportCopy() {
+  const data = R.exportJSON(S.events);
+  try { await navigator.clipboard.writeText(data); toast(`Copied ${S.events.length} events as JSON.`); }
+  catch (e) { showJSON(data); }
+}
+function importText(text) {
+  const { events, errors } = R.parseImport(text);
+  const errHTML = errors.length ? `<details class="errors" ${events.length ? "" : "open"}><summary>${errors.length} record${errors.length === 1 ? "" : "s"} couldn't be read</summary><ul>${errors.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></details>` : "";
+  if (!events.length) {
+    openDialog(`<div class="dlg"><h2 id="dlgTitle">Nothing to import</h2>${errHTML}<div class="foot"><button class="btn primary" data-act="close">OK</button></div></div>`);
+    return;
+  }
+  const plan = R.planImport(S.events, events);
+  if (!plan.fresh.length && !plan.duplicates.length) {
+    openDialog(`<div class="dlg"><h2 id="dlgTitle">Already up to date</h2><p>All ${plan.identical.length} records in this file match what you have.</p>${errHTML}<div class="foot"><button class="btn primary" data-act="close">OK</button></div></div>`);
+    return;
+  }
+  const dupHTML = plan.duplicates.map((d, i) => `<fieldset class="dupe"><legend class="sr">Possible duplicate ${i + 1}</legend>
+      <div><strong>${esc(R.displayName(d.incoming))}</strong> · ${R.formatDayMonth(d.incoming.month, d.incoming.day)} in the file
+      <br><span class="aka">Looks like ${esc(R.displayName(d.existing))} · ${R.formatDayMonth(d.existing.month, d.existing.day)}${d.existing.verified ? " (verified)" : " (needs confirmation)"}</span></div>
+      <div class="opts">
+        <label><input type="radio" name="d${i}" value="merge" checked> Merge into existing</label>
+        <label><input type="radio" name="d${i}" value="both"> Keep both</label>
+        <label><input type="radio" name="d${i}" value="skip"> Skip</label>
+      </div></fieldset>`).join("");
+  openDialog(`<form class="dlg" id="impForm"><h2 id="dlgTitle">Review import</h2>
+    <p>${plan.fresh.length} new event${plan.fresh.length === 1 ? "" : "s"} will be added${plan.identical.length ? `; ${plan.identical.length} identical record${plan.identical.length === 1 ? " is" : "s are"} already here and will be skipped` : ""}.</p>
+    ${plan.duplicates.length ? `<p><strong>${plan.duplicates.length} possible duplicate${plan.duplicates.length === 1 ? "" : "s"}.</strong> Merging keeps the existing name and adds new nicknames and notes; a verified date in the file replaces an unconfirmed one.</p>${dupHTML}` : ""}
+    ${errHTML}
+    <div class="foot"><button type="button" class="btn" data-act="close">Cancel</button><button class="btn primary" type="submit">Import</button></div></form>`);
+  $("#impForm").addEventListener("submit", (sub) => {
+    sub.preventDefault();
+    const fd = new FormData(sub.target), decisions = {};
+    plan.duplicates.forEach((_, i) => { decisions[i] = fd.get("d" + i); });
+    const beforeList = S.events, before = S.events.length;
+    S.events = R.applyImport(S.events, plan, decisions);
+    commit(beforeList); closeDialog(); renderAll();
+    toast(`Import done: ${S.events.length - before} added, ${Object.values(decisions).filter((v) => v === "merge").length} merged.`);
+  });
+}
+function pasteImport() {
+  openDialog(`<form class="dlg" id="pasteForm"><h2 id="dlgTitle">Paste JSON</h2><p>Paste a file exported from this app.</p>
+    <div class="field"><label for="pasteTa" class="sr">JSON</label><textarea id="pasteTa" class="mono" rows="10" autofocus></textarea></div>
+    <div class="foot"><button type="button" class="btn" data-act="close">Cancel</button><button class="btn primary" type="submit">Review</button></div></form>`);
+  $("#pasteForm").addEventListener("submit", (sub) => { sub.preventDefault(); importText($("#pasteTa").value); });
+}
+
+/* ---------- events ---------- */
+$("#monthSel").innerHTML = R.MONTHS.map((m, i) => `<option value="${i + 1}">${m}</option>`).join("");
+const shiftMonth = (d) => { S.month = ((S.month - 1 + d + 12) % 12) + 1; renderCalendar(); };
+$("#prevM").addEventListener("click", () => shiftMonth(-1));
+$("#nextM").addEventListener("click", () => shiftMonth(1));
+$("#monthSel").addEventListener("change", (e) => { S.month = +e.target.value; renderCalendar(); });
+$("#todayBtn").addEventListener("click", () => { S.today = new Date(); S.month = R.currentMonth(S.today); S.query = ""; S.filter = "all"; $("#q").value = ""; renderAll(); });
+$("#q").addEventListener("input", (e) => { S.query = e.target.value; renderCalendar(); });
+$("#filters").addEventListener("click", (e) => { const b = e.target.closest("[data-f]"); if (b) { S.filter = b.dataset.f; renderCalendar(); } });
+document.querySelector(".seg").addEventListener("click", (e) => { const b = e.target.closest("[data-v]"); if (b) setHash(b.dataset.v === "year" ? "year" : ""); });
+$("#mq").addEventListener("input", (e) => { S.mq = e.target.value; renderManage(); });
+$("#mfilters").addEventListener("click", (e) => { const b = e.target.closest("[data-f]"); if (b) { S.mfilter = b.dataset.f; renderManage(); } });
+$("#addB").addEventListener("click", () => eventForm(null, "birthday"));
+$("#addA").addEventListener("click", () => eventForm(null, "anniversary"));
+$("#expDl").addEventListener("click", exportDownload);
+$("#expCopy").addEventListener("click", exportCopy);
+$("#impFile").addEventListener("click", () => $("#fileIn").click());
+$("#impPaste").addEventListener("click", pasteImport);
+$("#fileIn").addEventListener("change", async (e) => {
+  const f = e.target.files[0]; e.target.value = "";
+  if (!f) return;
+  try { importText(await f.text()); } catch (err) { toast("That file couldn't be read."); }
+});
+$("#reloadSeed").addEventListener("click", async () => {
+  const preview = R.mergeSeed(S.events, SEED, { includeDeleted: true });
+  if (!preview.added.length) { toast(`Your list already has every event in the bundled list (version ${SEED_VERSION}).`); return; }
+  const ok = await confirmBox({ title: "Reload latest seed data?", body: `${preview.added.length} event${preview.added.length === 1 ? "" : "s"} from the bundled list ${preview.added.length === 1 ? "is" : "are"} missing from your saved list: <strong>${preview.added.map((e) => esc(R.displayName(e))).join(", ")}</strong>. They will be added back. Your edits and additions stay as they are.`, ok: "Add them" });
+  if (!ok) return;
+  S.events = preview.events; S.deletedSeedIds = []; S.migrated = null;
+  persist(); renderAll(); toast(`Added ${preview.added.length} event${preview.added.length === 1 ? "" : "s"} from the latest seed data.`);
+});
+$("#restore").addEventListener("click", async () => {
+  const ok = await confirmBox({ title: "Restore the original list?", body: `All additions, edits and deletions saved in this browser will be discarded and all ${R.seedEvents(SEED).length} original celebrations brought back. Export first if you want to keep your changes.`, ok: "Restore original", danger: true });
+  if (!ok) return;
+  S.events = R.restoreSeed(store, SEED); S.source = "seed"; S.savedAt = null; S.loadError = null; S.deletedSeedIds = []; S.editedIds = []; S.migrated = null;
+  renderAll(); toast("Original list restored.");
+});
+document.addEventListener("click", (e) => {
+  const t = e.target.closest("[data-edit],[data-del],[data-verify],[data-month],[data-act],[data-addperson],[data-addann]");
+  if (!t) return;
+  if (t.dataset.addann) { eventForm(null, "anniversary", { people: t.dataset.addann.split("|") }); return; }
+  if (t.dataset.addperson) { eventForm(null, "birthday", { name: t.dataset.addperson, relationship: "Wife of " + t.dataset.partner }); return; }
+  if (t.dataset.edit) { const ev = S.events.find((x) => x.id === t.dataset.edit); if (ev) eventForm(ev); }
+  else if (t.dataset.del) { closeDialog(); deleteEvent(t.dataset.del); }
+  else if (t.dataset.verify) {
+    const before = S.events;
+    S.events = S.events.map((x) => (x.id === t.dataset.verify ? Object.assign({}, x, { verified: !x.verified }) : x));
+    const ev = S.events.find((x) => x.id === t.dataset.verify);
+    commit(before); renderAll(); toast(`${R.displayName(ev)} marked ${ev.verified ? "verified" : "as needing confirmation"}.`);
+  }
+  else if (t.dataset.month) { S.month = +t.dataset.month; setHash(""); window.scrollTo({ top: $("#calendarView").offsetTop - 8 }); }
+  else if (t.dataset.act === "close") closeDialog();
+  else if (t.dataset.act === "clear") { S.filter = "all"; S.query = ""; $("#q").value = ""; renderCalendar(); }
+  else if (t.dataset.act === "clear-filter") { S.filter = "all"; renderCalendar(); }
+  else if (t.dataset.act === "clear-search") { S.query = ""; $("#q").value = ""; renderCalendar(); }
+});
+window.addEventListener("hashchange", route);
+// Roll "today" over at midnight if the page is left open.
+setInterval(() => { const n = new Date(); if (n.toDateString() !== S.today.toDateString()) { S.today = n; renderAll(); } }, 60000);
+
+if (S.migrated) persist();
+route();
+
+// Optional: a hosted download capability when running inside Claude.
+if (window.claude && typeof window.claude.use === "function") {
+  window.claude.use("downloads").then((d) => { S.dl = d || null; }).catch(() => {});
+}
+}
+</script>
+</body>
+</html>
