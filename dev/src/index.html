@@ -72,12 +72,13 @@ nav.tabs a[aria-current=page]{background:var(--page);color:var(--ink);box-shadow
 .hero{background:var(--band);color:var(--band-ink);padding-bottom:40px;position:relative;overflow:hidden;
   background-image:radial-gradient(circle,light-dark(rgb(255 255 255/.45),rgb(255 255 255/.08)) 1.4px,transparent 1.9px);background-size:24px 24px}
 .hero .wrap{position:relative;z-index:1}
-.rangoli{position:absolute;right:max(2vw,8px);top:50%;width:min(300px,34vw);height:auto;transform:translateY(-55%);opacity:.9;pointer-events:none}
+.rangoli{position:absolute;right:max(3vw,10px);top:50%;width:min(230px,26vw);height:auto;transform:translateY(-50%);opacity:.9;pointer-events:none}
 .garland-wrap{position:relative;height:0}
 .garland{display:block;width:100%;height:34px;position:absolute;left:0;top:-14px;z-index:2;pointer-events:none}
 .wish{margin:2px 0 12px;font-size:clamp(19px,2.4vw,24px);font-weight:500;line-height:1.5}
 .wish small{display:block;font:500 14px/1.3 var(--sans);opacity:.75}
-.wish [lang]{display:block}
+.wish [lang]{display:block;width:fit-content}
+.wish [dir=rtl],.greet [dir=rtl]{unicode-bidi:isolate}
 [lang=te]{font-family:"Noto Sans Telugu",var(--sans)}[lang=ta]{font-family:"Noto Sans Tamil",var(--sans)}
 [lang=ml]{font-family:"Noto Sans Malayalam",var(--sans)}[lang=ur]{font-family:"Noto Nastaliq Urdu",serif;line-height:2}
 .hero .wrap{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(18px,4vw,44px);align-items:center;padding-top:8px}
@@ -89,6 +90,23 @@ nav.tabs a[aria-current=page]{background:var(--page);color:var(--ink);box-shadow
 .calpage .dn{font:700 clamp(64px,11vw,96px)/1 var(--serif);padding:10px 0 2px}
 .calpage .wd{color:var(--muted);padding-bottom:12px;font-weight:500}
 .hero-text .eyebrow{font-weight:600;opacity:.8}
+/* Regional looks for the day itself */
+body[data-look]{--hb:light-dark(#a1124e,#ff9ec6);--cal:var(--an-mark)}
+body[data-look=telugu]{--band:#f5b81c;--band-ink:#2b1430;--hb:#b3122e;--cal:#c0392b}
+body[data-look=tamil]{--band:#7a1230;--band-ink:#fff1d6;--hb:#ffcf66;--cal:#c8961c}
+body[data-look=tamil] .hero{background-image:radial-gradient(circle,rgb(255 248 234/.32) 1.5px,transparent 2px);background-size:26px 26px}
+body[data-look=sourashtra]{--band:#b0153a;--band-ink:#fff4e0;--hb:#ffe08a;--cal:#c8961c}
+body[data-look=sourashtra] .hero{background-image:radial-gradient(circle at 50% 50%,rgb(255 255 255/.55) 1.6px,transparent 2.2px),radial-gradient(circle at 50% 50%,rgb(255 255 255/.4) 1.3px,transparent 1.8px);
+  background-size:30px 30px,30px 30px;background-position:0 0,15px 15px}
+body[data-look=kerala]{--band:#f6efdc;--band-ink:#2b1a0a;--hb:#8a5a00;--cal:#b8902a}
+body[data-look=kerala] .hero{background-image:linear-gradient(#d4a72c,#d4a72c),linear-gradient(#d4a72c,#d4a72c);background-size:100% 4px,100% 2px;background-position:0 calc(100% - 22px),0 calc(100% - 14px);background-repeat:no-repeat}
+body[data-look=muslim]{--band:#0f5d43;--band-ink:#f6edd0;--hb:#f0cf6a;--cal:#b8902a}
+body[data-look=muslim] .hero{background-image:radial-gradient(circle,rgb(212 175 55/.25) 1.4px,transparent 1.9px);background-size:24px 24px}
+body[data-look=tamil] .hero::after,body[data-look=sourashtra] .hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:12px;
+  background:linear-gradient(135deg,transparent 50%,#d4a017 50%) 0 0/12px 12px repeat-x,linear-gradient(225deg,transparent 50%,#d4a017 50%) 0 0/12px 12px repeat-x}
+body[data-look] .hb{color:var(--hb)}
+body[data-look] .calpage .mo{background:var(--cal)}
+body[data-look] .calpage .mo::before,body[data-look] .calpage .mo::after{background:var(--band)}
 .hb{font:700 clamp(20px,2.6vw,26px)/1.15 var(--serif);color:light-dark(#a1124e,#ff9ec6);margin-bottom:2px}
 .slogan{font-size:clamp(16px,1.8vw,18px);font-weight:500;margin:0 0 10px;max-width:46ch}
 .hero-text h2{font:700 clamp(30px,4.6vw,48px)/1.05 var(--serif);text-wrap:balance;margin:4px 0 6px;letter-spacing:-.01em}
@@ -129,6 +147,7 @@ select,.field input,.field textarea{border:1.5px solid var(--line);border-radius
 /* month list */
 .section-head{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin:18px 0 6px}
 .section-head h2{font:700 clamp(26px,3.4vw,34px)/1.1 var(--serif)}
+.section-head h2.mhead{font-size:clamp(21px,2.6vw,26px)}
 .section-head p{color:var(--muted)}
 .day{display:grid;grid-template-columns:96px minmax(0,1fr);gap:18px;padding:18px 0;border-top:1px solid var(--line);animation:rise .35s ease both}
 .dh{display:flex;flex-direction:column;align-items:flex-start}
@@ -286,7 +305,9 @@ body{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
   .hero-text h2{font-size:26px;margin:0 0 6px}
   .hero-text .meta{gap:5px}.pill{font-size:12.5px;padding:2px 9px}
   .wish{font-size:16px;margin:6px 0 0;line-height:1.45}.wish small{font-size:12px}
-  .rangoli{display:none}
+  .rangoli{display:block;width:170px;right:-46px;top:auto;bottom:6px;transform:none;opacity:.22}
+  body[data-look] .rangoli{opacity:.3}
+  body[data-look=kerala] .rangoli,body[data-look=telugu] .rangoli{opacity:.16}
   .garland{height:26px;top:-11px}
   #calendarView .toolbar{display:flex;flex-wrap:wrap;gap:8px;padding:18px 0 2px}
   #calendarView .toolbar .row{display:contents}
@@ -304,7 +325,7 @@ body{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
   .chips::-webkit-scrollbar{display:none}
   .chip{flex:none;min-height:36px;padding:4px 12px;font-size:14px}
   .seg{flex:none}.seg button{min-height:32px;padding:4px 10px;font-size:14px}
-  .section-head{margin:10px 0 2px}.section-head h2{font-size:24px}.section-head p{font-size:14px}
+  .section-head{margin:10px 0 2px}.section-head h2{font-size:24px}.section-head h2.mhead{font-size:20px}.section-head p{font-size:14px}
   .fstatus{font-size:14px;padding:6px 10px;margin-bottom:6px}
   .day{grid-template-columns:44px minmax(0,1fr);gap:10px;padding:10px 0;animation:none}
   .dh{flex-direction:column;align-items:center;gap:0;padding-top:4px}
@@ -358,6 +379,10 @@ body{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
   <symbol id="i-reset" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7"/><path d="M4 4v4.5h4.5"/></symbol>
   <symbol id="i-flower" viewBox="0 0 20 20"><circle cx="10" cy="10" r="8" fill="#f2a20c"/><circle cx="10" cy="10" r="5.2" fill="#f7c04a"/><circle cx="10" cy="10" r="2.2" fill="#d9780a"/></symbol>
   <symbol id="i-leaf" viewBox="0 0 20 20"><path d="M2 10c4-5 12-5 16 0-4 5-12 5-16 0Z" fill="#3f8a4a"/></symbol>
+  <symbol id="i-jasmine" viewBox="0 0 16 10"><ellipse cx="4" cy="5" rx="3.2" ry="2.2" fill="#fffdf5" stroke="#c9b98a" stroke-width=".7" transform="rotate(-25 4 5)"/><ellipse cx="9" cy="4.5" rx="3.2" ry="2.2" fill="#fffaf0" stroke="#c9b98a" stroke-width=".7" transform="rotate(20 9 4.5)"/><ellipse cx="13" cy="5.5" rx="2.6" ry="1.9" fill="#f4f0e2" stroke="#c9b98a" stroke-width=".7" transform="rotate(-10 13 5.5)"/></symbol>
+  <symbol id="i-strand" viewBox="0 0 10 40"><g fill="#fffdf5" stroke="#c9b98a" stroke-width=".7"><ellipse cx="5" cy="5" rx="3" ry="2.2"/><ellipse cx="5" cy="11" rx="3" ry="2.2"/><ellipse cx="5" cy="17" rx="3" ry="2.2"/><ellipse cx="5" cy="23" rx="3" ry="2.2"/></g><circle cx="5" cy="31" r="4" fill="#f27b21"/><circle cx="5" cy="31" r="1.6" fill="#ffd27a"/></symbol>
+  <symbol id="i-lantern" viewBox="0 0 20 40"><path d="M10 0v6" stroke="#d4af37" stroke-width="1.4"/><path d="M6 6h8l2 4H4Z" fill="#d4af37"/><path d="M4 10h12l-1 14H5Z" fill="#f3d27a" stroke="#b8902a" stroke-width="1"/><path d="M8 12h4v10H8Z" fill="#fff4c2"/><path d="M5 24h10l-5 7Z" fill="#d4af37"/><circle cx="10" cy="34" r="1.6" fill="#d4af37"/></symbol>
+  <symbol id="i-star8" viewBox="-10 -10 20 20"><path d="M0-9 2.6-6.3 6.4-6.4 6.3-2.6 9 0 6.3 2.6 6.4 6.4 2.6 6.3 0 9-2.6 6.3-6.4 6.4-6.3 2.6-9 0-6.3-2.6-6.4-6.4-2.6-6.3Z" fill="#d4af37"/></symbol>
   <symbol id="i-mango" viewBox="0 0 12 26"><path d="M6 0C11 6 11 17 6 26 1 17 1 6 6 0Z" fill="#2f7d3c"/><path d="M6 2v22" stroke="#a6d18f" stroke-width=".8"/></symbol>
 </svg>
 
@@ -367,7 +392,7 @@ body{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
     <p class="today-date" id="todayDate"></p>
     <nav class="tabs" aria-label="Sections">
       <a href="#" id="tabCal">Calendar</a>
-      <a href="#manage" id="tabManage">Manage<span class="long"> events</span></a>
+      <a href="#manage" id="tabManage">Manage<span class="long">&nbsp;events</span></a>
     </nav>
   </div>
 </header>
@@ -395,7 +420,7 @@ body{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
     </div>
     <div class="row">
       <div class="chips" id="filters" role="group" aria-label="Filter events">
-        <button class="chip" data-f="all">All<span class="long"> events</span></button>
+        <button class="chip" data-f="all">All<span class="long">&nbsp;events</span></button>
         <button class="chip" data-f="birthday"><svg class="i"><use href="#i-cake"/></svg>Birthdays</button>
         <button class="chip" data-f="anniversary"><svg class="i"><use href="#i-rings"/></svg><span class="long">Wedding anniversaries</span><span class="short">Anniversaries</span></button>
       </div>
@@ -479,7 +504,7 @@ const S = {
   events: loaded.events, source: loaded.source, savedAt: loaded.savedAt, loadError: loaded.error,
   deletedSeedIds: loaded.deletedSeedIds || [], editedIds: loaded.editedIds || [], migrated: loaded.migrated || null,
   today: new Date(), month: 0, filter: "all", view: "month", query: "", mfilter: "all", mq: "",
-  storageOk: !!store, dl: null, undo: null,
+  storageOk: !!store, dl: null, undo: null, look: "",
 };
 S.month = R.currentMonth(S.today);
 const SEED_IDS = new Set(R.seedEvents(SEED).map((e) => e.id));
@@ -531,13 +556,59 @@ function toast(msg, action) {
 function drawGarland() {
   const g = $("#garland");
   const W0 = g.clientWidth || 1000, H0 = g.clientHeight || 34, W = Math.round(W0 * 34 / H0), n = Math.max(8, Math.round(W / 30));
-  let s = "";
-  for (let i = 0; i < n; i++) {
-    const x = (i + 0.5) * (W / n);
-    s += i % 2 ? `<use href="#i-mango" x="${x - 6}" y="8" width="12" height="24"/>` : `<use href="#i-flower" x="${x - 9}" y="3" width="18" height="18"/>`;
+  const look = S.look || "";
+  let s = "", line = "#2f7d3c";
+  if (look === "tamil" || look === "sourashtra") {
+    // malli poo (jasmine) string with hanging strands tipped with kanakambaram
+    line = "#3f7a3a";
+    for (let x = 0; x < W; x += 14) s += `<use href="#i-jasmine" x="${x}" y="7" width="16" height="10"/>`;
+    for (let x = 30; x < W; x += 64) s += `<use href="#i-strand" x="${x}" y="13" width="7" height="22"/>`;
+  } else if (look === "kerala") {
+    line = "#b8902a";
+    for (let i = 0; i < n; i++) { const x = (i + 0.5) * (W / n); s += i % 2 ? `<use href="#i-jasmine" x="${x - 8}" y="7" width="16" height="10"/>` : `<use href="#i-flower" x="${x - 9}" y="3" width="18" height="18"/>`; }
+  } else if (look === "muslim") {
+    line = "#d4af37";
+    for (let x = 24, i = 0; x < W; x += 36, i++) s += i % 2 ? `<use href="#i-lantern" x="${x - 7}" y="12" width="14" height="22"/>` : `<use href="#i-star8" x="${x - 6}" y="6" width="12" height="12"/>`;
+  } else {
+    for (let i = 0; i < n; i++) { const x = (i + 0.5) * (W / n); s += i % 2 ? `<use href="#i-mango" x="${x - 6}" y="8" width="12" height="24"/>` : `<use href="#i-flower" x="${x - 9}" y="3" width="18" height="18"/>`; }
   }
   g.setAttribute("viewBox", `0 0 ${W} 34`);
-  g.innerHTML = `<line x1="0" y1="12" x2="${W}" y2="12" stroke="#2f7d3c" stroke-width="1.6"/>` + s;
+  g.innerHTML = `<line x1="0" y1="12" x2="${W}" y2="12" stroke="${line}" stroke-width="1.6"/>` + s;
+}
+// Regional motif for the top space: kolam (Tamil), sungudi kolam (Sourashtra), pookalam (Kerala),
+// crescent & star lattice (Muslim), rangoli/muggu (Telugu and default).
+function drawMotif(look) {
+  const el = $("#rangoli");
+  if (look === "tamil" || look === "sourashtra") {
+    const ink = look === "tamil" ? "#fff8ea" : "#ffd36b";
+    let k = "";
+    for (let i = -2; i <= 2; i++) for (let j = -2; j <= 2; j++) {
+      if (Math.abs(i) + Math.abs(j) > 2) continue;
+      const x = i * 30, y = j * 30;
+      k += `<rect x="-13" y="-13" width="26" height="26" rx="8" transform="translate(${x} ${y}) rotate(45)" fill="none" stroke="${ink}" stroke-width="3"/>`;
+      k += `<circle cx="${x}" cy="${y}" r="3.2" fill="${ink}"/>`;
+    }
+    for (const [x, y] of [[0, -84], [84, 0], [0, 84], [-84, 0]]) k += `<circle cx="${x}" cy="${y}" r="11" fill="none" stroke="${ink}" stroke-width="3"/><circle cx="${x}" cy="${y}" r="3" fill="${ink}"/>`;
+    k += `<rect x="-56" y="-56" width="112" height="112" rx="26" transform="rotate(45)" fill="none" stroke="${ink}" stroke-width="3" stroke-dasharray="1 7" stroke-linecap="round"/>`;
+    el.innerHTML = k; return;
+  }
+  if (look === "kerala") {
+    const wedge = (r1, r2, a1, a2, fill) => { const p = (r, a) => `${(r * Math.cos(a)).toFixed(1)} ${(r * Math.sin(a)).toFixed(1)}`;
+      return `<path d="M${p(r1, a1)} L${p(r2, a1)} A${r2} ${r2} 0 0 1 ${p(r2, a2)} L${p(r1, a2)} A${r1} ${r1} 0 0 0 ${p(r1, a1)}Z" fill="${fill}"/>`; };
+    const ring = (r1, r2, n, colors, off = 0) => Array.from({ length: n }, (_, i) => wedge(r1, r2, (i + off) * 2 * Math.PI / n, (i + 1 + off) * 2 * Math.PI / n, colors[i % colors.length])).join("");
+    el.innerHTML = ring(78, 94, 32, ["#2f7d3c", "#3f9a4a"]) + ring(60, 78, 24, ["#f27b21", "#f7c04a"], .5) + ring(42, 60, 16, ["#a0175a", "#7b1fa2", "#fff8ea"]) +
+      ring(24, 42, 12, ["#f7c04a", "#fff8ea"], .5) + `<circle r="24" fill="#f27b21"/><circle r="12" fill="#c98a1b"/><path d="M0-14c5 6 5 11 0 14-5-3-5-8 0-14Z" fill="#ffd27a"/>`;
+    return;
+  }
+  if (look === "muslim") {
+    const stars = Array.from({ length: 8 }, (_, i) => { const a = i * Math.PI / 4; return `<use href="#i-star8" x="${(80 * Math.cos(a) - 9).toFixed(1)}" y="${(80 * Math.sin(a) - 9).toFixed(1)}" width="18" height="18"/>`; }).join("");
+    el.innerHTML = `<circle r="92" fill="none" stroke="#d4af37" stroke-opacity=".6" stroke-width="1.5" stroke-dasharray="3 5"/>${stars}
+      <path d="M0-56 14-14 56 0 14 14 0 56-14 14-56 0-14-14Z" fill="none" stroke="#d4af37" stroke-opacity=".45" stroke-width="2"/>
+      <circle cx="-6" cy="0" r="40" fill="#e9c75c"/><circle cx="10" cy="-8" r="34" fill="var(--band)"/>
+      <path d="M30 2l3.5 7.6 8.3.9-6.2 5.6 1.8 8.2-7.4-4.2-7.4 4.2 1.8-8.2-6.2-5.6 8.3-.9Z" fill="#e9c75c"/>`;
+    return;
+  }
+  drawRangoli();
 }
 function drawRangoli() {
   // A simple 8-fold rangoli: outer petals in rani pink, inner in marigold, kolam dots between.
@@ -549,7 +620,7 @@ function drawRangoli() {
     ${ring(8, 30, 1.6, "#d6246e", 0)}${ring(8, 22, 1.15, "#7b1fa2", 22.5)}${ring(8, 8, .8, "#f2a20c", 0)}
     <circle r="12" fill="#fff"/><circle r="7" fill="#d6246e"/><circle r="3" fill="#f7c04a"/>`;
 }
-drawRangoli();
+drawMotif("");
 const garlandRO = new ResizeObserver(drawGarland);
 garlandRO.observe($("#garland"));
 
@@ -561,6 +632,10 @@ function renderHero() {
   if (!next) { box.innerHTML = `<div class="hero-text"><p class="eyebrow">No celebrations yet</p><h2>Add the first birthday or anniversary</h2><a class="btn primary" href="#manage">Manage events</a></div>`; return; }
   const first = next.events[0];
   const date = new Date(S.today.getFullYear(), S.today.getMonth(), S.today.getDate() + next.days);
+  // On the day, dress the top space in the celebrant's regional theme.
+  const LOOKS = { telugu: "telugu", tamil: "tamil", "tamil-sourashtra": "sourashtra", malayali: "kerala", muslim: "muslim" };
+  const look = next.days === 0 ? LOOKS[R.communitiesOf(first, S.events)[0]] || "" : "";
+  if (look !== S.look) { S.look = look; if (look) document.body.dataset.look = look; else delete document.body.dataset.look; drawMotif(look); drawGarland(); }
   const isBd = next.events.every((e) => e.type === "birthday");
   const who = next.events.map((e) => esc(R.displayName(e))).join(" · ");
   const kinds = [...new Set(next.events.map((e) => (e.type === "birthday" ? "Birthday" : "Wedding anniversary")))].join(" & ");
@@ -635,7 +710,7 @@ function cardHTML(ev) {
       ${greetHTML(ev)}
     </div>
     <div class="side">
-      <span class="when ${w.days <= 1 ? "hot" : ""}">${esc(w.text)}</span>
+      <span class="when ${w.days <= 1 ? "hot" : ""}">${w.text.startsWith("Earlier") ? `Earlier<span class="long">&nbsp;${esc(w.text.slice(8))}</span>` : esc(w.text)}</span>
       <button class="btn ghost icon editbtn" data-edit="${esc(ev.id)}" aria-label="Edit ${esc(name)}" title="Edit">${ico("pencil")}</button>
     </div>
   </article>`;
@@ -677,17 +752,14 @@ function renderMonth() {
   const summary = countText(list);
   const head = (searching
     ? `<div class="section-head"><h2>Matches for “${esc(S.query.trim())}”</h2><p id="countLine">Across all months · ${summary}</p></div>`
-    : `<h2 class="sr" id="countLine" aria-live="polite">${R.MONTHS[S.month - 1]}: ${summary}</h2>`) + filterStatus();
+    : `<div class="section-head"><h2 class="mhead">${S.month === S.today.getMonth() + 1 ? "This month’s celebrations" : R.MONTHS[S.month - 1] + " celebrations"}</h2></div><span class="sr" id="countLine" aria-live="polite">${R.MONTHS[S.month - 1]}: ${summary}</span>`) + filterStatus();
   if (!list.length) {
     const fname = { birthday: "birthdays", anniversary: "wedding anniversaries", unverified: "events needing confirmation", all: "celebrations" }[S.filter];
     return head + (searching
       ? emptyHTML("No one matches that name", "Try a nickname or a shorter spelling — search covers aliases too.")
       : emptyHTML(`No ${fname} in ${R.MONTHS[S.month - 1]}`, "A quiet month. Use the arrows to see what's coming next."));
   }
-  const t0 = new Date(S.today.getFullYear(), S.today.getMonth(), S.today.getDate());
   const groups = R.groupByDate(list);
-  const isPast = (g) => !searching && occThisYear(g.events[0]) < t0;
-  const past = groups.filter(isPast), rest = groups.filter((g) => !isPast(g));
   const groupHTML = (g) => {
     const w = whenLabel(g.events[0]);
     const wd = WD[occThisYear(g.events[0]).getDay()];
@@ -696,9 +768,7 @@ function renderMonth() {
       <div class="cards">${g.events.map(cardHTML).join("")}</div>
     </section>`;
   };
-  const pastCount = past.reduce((n, g) => n + g.events.length, 0);
-  const earlier = past.length ? `<details class="earlier" ${rest.length ? "" : "open"}><summary>${S.month === S.today.getMonth() + 1 ? "Earlier this month" : "Already celebrated this year"} · ${pastCount} celebration${pastCount === 1 ? "" : "s"}</summary>${past.map(groupHTML).join("")}</details>` : "";
-  return head + earlier + rest.map(groupHTML).join("");
+  return head + groups.map(groupHTML).join("");
 }
 function renderYear() {
   const list = R.filterEvents(S.events, { filter: S.filter, query: S.query });
@@ -789,6 +859,7 @@ function route() {
   $("#calendarView").hidden = manage;
   $("#manageView").hidden = !manage;
   $("#hero").hidden = manage; $("#garlandWrap").hidden = manage;
+  if (manage) { delete document.body.dataset.look; S.look = null; }
   $("#tabCal").toggleAttribute("aria-current", !manage); if (!manage) $("#tabCal").setAttribute("aria-current", "page");
   $("#tabManage").toggleAttribute("aria-current", manage); if (manage) $("#tabManage").setAttribute("aria-current", "page");
   renderAll();
