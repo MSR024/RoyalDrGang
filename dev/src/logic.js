@@ -78,6 +78,16 @@
   }
 
   /* ---------- Dates ---------- */
+  // The group's calendar day follows one time zone (US Pacific) for every viewer, so friends in
+  // India see a celebration for the same day as friends in California. Returns a local Date
+  // at midnight carrying that zone's year, month and day.
+  const BASE_TIME_ZONE = "America/Los_Angeles";
+  function todayIn(timeZone, now) {
+    const parts = new Intl.DateTimeFormat("en-US", { timeZone: timeZone || BASE_TIME_ZONE, year: "numeric", month: "numeric", day: "numeric" })
+      .formatToParts(now || new Date());
+    const get = (t) => Number(parts.find((p) => p.type === t).value);
+    return new Date(get("year"), get("month") - 1, get("day"));
+  }
   function currentMonth(today) {
     return (today || new Date()).getMonth() + 1;
   }
@@ -537,7 +547,7 @@
     phon, COMMUNITIES, communitiesOf, greetingsFor, wishText,
     STORAGE_KEY, SCHEMA_VERSION, MONTHS, DAYS_IN_MONTH, norm,
     displayName, formatDayMonth, compareEvents, sortEvents, groupByDate, eventsInMonth, monthSummary,
-    currentMonth, daysUntil, relativeLabel, nextCelebration, nextAfterToday, upcoming,
+    BASE_TIME_ZONE, todayIn, currentMonth, daysUntil, relativeLabel, nextCelebration, nextAfterToday, upcoming,
     buildAliasIndex, matchesQuery, filterEvents, matchedAlias,
     validateEvent, makeId, isDuplicate, findDuplicate, mergeEvents,
     exportData, exportJSON, parseImport, planImport, applyImport,

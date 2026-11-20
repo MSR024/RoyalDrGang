@@ -57,6 +57,10 @@ When the link is pasted into WhatsApp, iMessage, Facebook or Slack, people see *
 - Check it with opengraph.xyz after the site is live.
 - WhatsApp caches previews. If it shows an old or blank one, share the link with `?v=2` on the end.
 
+## Whose "today"?
+
+The calendar day follows **US Pacific time (California)** for every visitor, so a birthday on the 19th shows as "today" in India until 1:30 PM IST on the 20th, when it's midnight in California. To change this, edit `BASE_TIME_ZONE` in `dev/src/logic.js`, for example to `"Asia/Kolkata"`.
+
 ## How the data works
 
 - `dev/src/seed.json` is the shared list everyone sees. It has a `seedVersion` number.

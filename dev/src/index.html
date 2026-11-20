@@ -503,7 +503,7 @@ const loaded = R.loadEvents(store, SEED);
 const S = {
   events: loaded.events, source: loaded.source, savedAt: loaded.savedAt, loadError: loaded.error,
   deletedSeedIds: loaded.deletedSeedIds || [], editedIds: loaded.editedIds || [], migrated: loaded.migrated || null,
-  today: new Date(), month: 0, filter: "all", view: "month", query: "", mfilter: "all", mq: "",
+  today: R.todayIn(R.BASE_TIME_ZONE), month: 0, filter: "all", view: "month", query: "", mfilter: "all", mq: "",
   storageOk: !!store, dl: null, undo: null, look: "",
 };
 S.month = R.currentMonth(S.today);
@@ -627,6 +627,7 @@ garlandRO.observe($("#garland"));
 /* ---------- header + hero ---------- */
 function renderHero() {
   $("#todayDate").textContent = S.today.toLocaleDateString(undefined, { weekday: "long", month: "long", day: "numeric", year: "numeric" });
+  $("#todayDate").title = "Celebrations follow US Pacific time (California), wherever you are.";
   const next = R.nextCelebration(S.events, S.today);
   const box = $("#heroInner");
   if (!next) { box.innerHTML = `<div class="hero-text"><p class="eyebrow">No celebrations yet</p><h2>Add the first birthday or anniversary</h2><a class="btn primary" href="#manage">Manage events</a></div>`; return; }
@@ -1049,7 +1050,7 @@ const shiftMonth = (d) => { S.month = ((S.month - 1 + d + 12) % 12) + 1; renderC
 $("#prevM").addEventListener("click", () => shiftMonth(-1));
 $("#nextM").addEventListener("click", () => shiftMonth(1));
 $("#monthSel").addEventListener("change", (e) => { S.month = +e.target.value; renderCalendar(); });
-$("#todayBtn").addEventListener("click", () => { S.today = new Date(); S.month = R.currentMonth(S.today); S.query = ""; S.filter = "all"; $("#q").value = ""; renderAll(); });
+$("#todayBtn").addEventListener("click", () => { S.today = R.todayIn(R.BASE_TIME_ZONE); S.month = R.currentMonth(S.today); S.query = ""; S.filter = "all"; $("#q").value = ""; renderAll(); });
 $("#q").addEventListener("input", (e) => { S.query = e.target.value; renderCalendar(); });
 $("#filters").addEventListener("click", (e) => { const b = e.target.closest("[data-f]"); if (b) { S.filter = b.dataset.f; renderCalendar(); } });
 document.querySelector(".seg").addEventListener("click", (e) => { const b = e.target.closest("[data-v]"); if (b) setHash(b.dataset.v === "year" ? "year" : ""); });
@@ -1104,7 +1105,7 @@ window.addEventListener("hashchange", route);
 // Keep "today" current: every minute while open, and whenever the page comes back to the
 // screen (iPhone Safari pauses background tabs, and restores pages from its back/forward cache).
 function refreshToday() {
-  const n = new Date();
+  const n = R.todayIn(R.BASE_TIME_ZONE);
   if (n.toDateString() !== S.today.toDateString()) {
     const wasOnCurrentMonth = S.month === S.today.getMonth() + 1;
     S.today = n;
