@@ -1101,7 +1101,21 @@ document.addEventListener("click", (e) => {
 });
 window.addEventListener("hashchange", route);
 // Roll "today" over at midnight if the page is left open.
-setInterval(() => { const n = new Date(); if (n.toDateString() !== S.today.toDateString()) { S.today = n; renderAll(); } }, 60000);
+// Keep "today" current: every minute while open, and whenever the page comes back to the
+// screen (iPhone Safari pauses background tabs, and restores pages from its back/forward cache).
+function refreshToday() {
+  const n = new Date();
+  if (n.toDateString() !== S.today.toDateString()) {
+    const wasOnCurrentMonth = S.month === S.today.getMonth() + 1;
+    S.today = n;
+    if (wasOnCurrentMonth) S.month = R.currentMonth(n);
+    renderAll();
+  }
+}
+setInterval(refreshToday, 60000);
+document.addEventListener("visibilitychange", () => { if (!document.hidden) refreshToday(); });
+window.addEventListener("pageshow", refreshToday);
+window.addEventListener("focus", refreshToday);
 
 if (S.migrated) persist();
 route();
