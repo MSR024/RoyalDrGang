@@ -89,6 +89,8 @@ nav.tabs a[aria-current=page]{background:var(--page);color:var(--ink);box-shadow
 .calpage .dn{font:700 clamp(64px,11vw,96px)/1 var(--serif);padding:10px 0 2px}
 .calpage .wd{color:var(--muted);padding-bottom:12px;font-weight:500}
 .hero-text .eyebrow{font-weight:600;opacity:.8}
+.hb{font:700 clamp(20px,2.6vw,26px)/1.15 var(--serif);color:light-dark(#a1124e,#ff9ec6);margin-bottom:2px}
+.slogan{font-size:clamp(16px,1.8vw,18px);font-weight:500;margin:0 0 10px;max-width:46ch}
 .hero-text h2{font:700 clamp(30px,4.6vw,48px)/1.05 var(--serif);text-wrap:balance;margin:4px 0 6px;letter-spacing:-.01em}
 .hero-text{max-width:640px}
 .hero-text .meta{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
@@ -252,6 +254,7 @@ dialog::backdrop{background:rgb(30 10 35/.45)}
 .editbtn{width:40px;min-height:40px;color:var(--muted)}
 .editbtn svg{width:18px;height:18px}
 details.earlier{border-top:1px solid var(--line)}
+#content>.day:first-of-type,#content>details:first-child{margin-top:8px}
 details.earlier>summary{cursor:pointer;list-style:none;padding:14px 0;color:var(--muted);font-weight:600;display:flex;align-items:center;gap:8px;min-height:48px}
 details.earlier>summary::-webkit-details-marker{display:none}
 details.earlier>summary::before{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s}
@@ -278,6 +281,8 @@ body{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
   .calpage .dn{font-size:40px;padding:6px 0 0}
   .calpage .wd{font-size:11px;padding-bottom:6px}
   .hero-text .eyebrow{font-size:13px}
+  .hb{font-size:18px}
+  .slogan{font-size:14px;line-height:1.4;margin:0 0 6px}
   .hero-text h2{font-size:26px;margin:0 0 6px}
   .hero-text .meta{gap:5px}.pill{font-size:12.5px;padding:2px 9px}
   .wish{font-size:16px;margin:6px 0 0;line-height:1.45}.wish small{font-size:12px}
@@ -1115,9 +1120,10 @@ function renderHero() {
       <div class="wd">${WD[date.getDay()]}</div>
     </div>
     <div class="hero-text">
-      <p class="eyebrow">${next.days === 0 ? "Today we celebrate" : "Next celebration"}</p>
+      ${next.days === 0 ? `<p class="hb">${esc(happyTitle(next.events))}</p>` : `<p class="eyebrow">Next celebration</p>`}
       <h2>${who}</h2>
-      <div class="meta">
+      ${next.days === 0 ? `<p class="slogan">${esc(slogan(next.events))}</p>` : ""}
+      <div class="meta" ${next.days === 0 ? "hidden" : ""}>
         <span class="pill solid">${esc(R.relativeLabel(next.days))}</span>
         <span class="pill soft">${ico(isBd ? "cake" : "rings")}${esc(kinds)}</span>
         <span class="pill soft">${R.formatDayMonth(first.month, first.day)}</span>
@@ -1126,6 +1132,33 @@ function renderHero() {
     </div>`;
 }
 
+// English wishes for the day itself; picked per person/couple and year so they vary.
+const SLOGANS = {
+  birthday: [
+    "Wishing you a year full of laughter, love and good health.",
+    "Many happy returns of the day — the whole gang is celebrating you!",
+    "May this year bring you joy, success and lots of cake.",
+    "Cheers to another fabulous year. Have a wonderful day!",
+    "From all of us at Royal Dr — have the happiest birthday!",
+  ],
+  anniversary: [
+    "Wishing you both a lifetime of love and happiness.",
+    "Here's to many more years of togetherness!",
+    "May your bond grow stronger with every passing year.",
+    "Cheers to the lovely couple from all of us at Royal Dr!",
+  ],
+};
+function happyTitle(list) {
+  const b = list.some((e) => e.type === "birthday"), a = list.some((e) => e.type === "anniversary");
+  return b && a ? "Happy Birthday & Anniversary!" : b ? "Happy Birthday!" : "Happy Anniversary!";
+}
+function slogan(list) {
+  const type = list.every((e) => e.type === "anniversary") ? "anniversary" : "birthday";
+  const pool = SLOGANS[type];
+  const seed = list.map((e) => e.id).join("|") + S.today.getFullYear();
+  let h = 0; for (const c of seed) h = (h * 31 + c.charCodeAt(0)) >>> 0;
+  return pool[h % pool.length];
+}
 function wishHTML(list) {
   const lines = [];
   const seen = new Set();
@@ -1193,7 +1226,7 @@ function renderMonth() {
   const summary = countText(list);
   const head = (searching
     ? `<div class="section-head"><h2>Matches for “${esc(S.query.trim())}”</h2><p id="countLine">Across all months · ${summary}</p></div>`
-    : `<div class="section-head"><h2>${R.MONTHS[S.month - 1]}</h2><p id="countLine">${summary}</p></div>`) + filterStatus();
+    : `<h2 class="sr" id="countLine" aria-live="polite">${R.MONTHS[S.month - 1]}: ${summary}</h2>`) + filterStatus();
   if (!list.length) {
     const fname = { birthday: "birthdays", anniversary: "wedding anniversaries", unverified: "events needing confirmation", all: "celebrations" }[S.filter];
     return head + (searching
@@ -1226,7 +1259,7 @@ function renderYear() {
       ${all.length ? `<ul>${all.map((e) => `<li class="${e.type === "birthday" ? "bd" : "an"}"><b>${e.day}</b>${ico(e.type === "birthday" ? "cake" : "rings")}<span>${esc(R.displayName(e))}</span></li>`).join("")}</ul>` : `<p class="none">No celebrations</p>`}
     </button>`;
   }).join("");
-  const head = `<div class="section-head"><h2>${S.today.getFullYear()} at a glance</h2><p id="countLine">${list.length} celebrations<span class="long"> · ${countText(list)} · tap a month to open it</span></p></div>` + filterStatus();
+  const head = `<div class="section-head"><h2>${S.today.getFullYear()} at a glance</h2><p class="long">Tap a month to open it</p></div><span class="sr" id="countLine">${list.length} celebrations · ${countText(list)}</span>` + filterStatus();
   return head + (list.length ? `<div class="year">${tiles}</div>` : emptyHTML("Nothing matches these filters", "Clear the search or pick another filter."));
 }
 function renderCalendar() {
