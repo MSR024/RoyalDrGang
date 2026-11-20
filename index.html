@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Royal Dr Gang Celebrations</title>
 <meta name="description" content="Royal Dr Gang — birthdays and wedding anniversaries of our friends and family from Royal Dr, Santa Clara. See who's celebrating today and this month.">
 <link rel="canonical" href="https://www.royaldrgang.com/">
@@ -248,20 +248,86 @@ dialog::backdrop{background:rgb(30 10 35/.45)}
 .toasts{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);display:grid;gap:8px;z-index:50;width:min(480px,calc(100vw - 24px))}
 .toast{background:var(--ink);color:var(--bg);padding:12px 16px;border-radius:14px;display:flex;gap:12px;align-items:center;justify-content:space-between;box-shadow:0 10px 30px rgb(0 0 0/.25);animation:rise .25s ease both}
 .toast button{background:none;border:1.5px solid currentColor;color:inherit;border-radius:10px;padding:4px 12px;font-weight:600;cursor:pointer;min-height:36px}
+.short{display:none}
+.editbtn{width:40px;min-height:40px;color:var(--muted)}
+.editbtn svg{width:18px;height:18px}
+details.earlier{border-top:1px solid var(--line)}
+details.earlier>summary{cursor:pointer;list-style:none;padding:14px 0;color:var(--muted);font-weight:600;display:flex;align-items:center;gap:8px;min-height:48px}
+details.earlier>summary::-webkit-details-marker{display:none}
+details.earlier>summary::before{content:"";width:8px;height:8px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(-45deg);transition:transform .15s}
+details.earlier[open]>summary::before{transform:rotate(45deg)}
+details.earlier .day{opacity:.85}
+body{-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%}
 @keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 [hidden]{display:none!important}
 
 @media (max-width:600px){
-  .hero .wrap{grid-template-columns:1fr;justify-items:start}
-  .calpage{transform:rotate(-1.5deg)}
+  /* iPhone: fit today's celebration and the month's first dates on one screen */
+  .wrap{padding-inline:max(14px,env(safe-area-inset-left)) max(14px,env(safe-area-inset-right))}
+  .long{display:none}.short{display:inline}
+  .top .wrap{flex-wrap:nowrap;gap:8px;padding-block:10px;padding-top:max(10px,env(safe-area-inset-top))}
+  .brand{font-size:19px;white-space:nowrap}
+  .today-date{display:none}
+  nav.tabs{padding:3px}nav.tabs a{padding:6px 11px;min-height:36px;font-size:14px}
+  .hero{padding-bottom:22px;background-size:20px 20px}
+  .hero .wrap{grid-template-columns:76px minmax(0,1fr);gap:14px;align-items:start;padding-top:2px}
+  .calpage{width:76px;border-radius:10px;transform:rotate(-2deg)}
+  .calpage .mo{font-size:11px;padding:5px 0}
+  .calpage .mo::before,.calpage .mo::after{top:-4px;width:6px;height:11px}
+  .calpage .dn{font-size:40px;padding:6px 0 0}
+  .calpage .wd{font-size:11px;padding-bottom:6px}
+  .hero-text .eyebrow{font-size:13px}
+  .hero-text h2{font-size:26px;margin:0 0 6px}
+  .hero-text .meta{gap:5px}.pill{font-size:12.5px;padding:2px 9px}
+  .wish{font-size:16px;margin:6px 0 0;line-height:1.45}.wish small{font-size:12px}
   .rangoli{display:none}
-  .seg{margin-left:0}
-  .day{grid-template-columns:1fr;gap:8px}
-  .dh{flex-direction:row;align-items:baseline;gap:10px}
-  .dh .dnum{font-size:40px}
-  .card{grid-template-columns:auto minmax(0,1fr);padding:12px}
-  .side{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center}
+  .garland{height:26px;top:-11px}
+  #calendarView .toolbar{display:flex;flex-wrap:wrap;gap:8px;padding:18px 0 2px}
+  #calendarView .toolbar .row{display:contents}
+  #calendarView .search{order:1;flex:1 1 0}
+  #calendarView .seg{order:2;margin:0}
+  #calendarView .monthnav{order:3;flex:1 1 100%}
+  #calendarView .chips{order:4;flex:1 1 100%}
+  #manageView .toolbar .row{flex-wrap:wrap}
+  #manageView .search{flex-basis:100%}
+  .search input{min-height:42px;padding-block:8px}
+  .monthnav{flex:1;gap:5px}
+  .monthnav select{flex:1;min-height:40px;padding-block:6px}
+  .monthnav .btn{min-height:40px}.monthnav .btn.icon{width:40px}
+  .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;flex:1}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none;min-height:36px;padding:4px 12px;font-size:14px}
+  .seg{flex:none}.seg button{min-height:32px;padding:4px 10px;font-size:14px}
+  .section-head{margin:10px 0 2px}.section-head h2{font-size:24px}.section-head p{font-size:14px}
+  .fstatus{font-size:14px;padding:6px 10px;margin-bottom:6px}
+  .day{grid-template-columns:44px minmax(0,1fr);gap:10px;padding:10px 0;animation:none}
+  .dh{flex-direction:column;align-items:center;gap:0;padding-top:4px}
+  .dh .dnum{font-size:30px}
+  .dh b{font-size:12px;font-weight:600}.dh span{font-size:11px;text-align:center}
+  .cards{gap:8px}
+  .card{grid-template-columns:34px minmax(0,1fr) auto;gap:10px;padding:10px 6px 10px 10px;border-radius:14px}
+  .card .ico{width:34px;height:34px;border-radius:10px}.card .ico svg{width:19px;height:19px}
+  .kind{font-size:12.5px}
+  .card h3{font-size:17px;margin:1px 0 0}
+  .greet{font-size:14px;margin-top:3px;line-height:1.4}.greet i{display:block;font-size:12px}
+  .side{grid-column:auto;flex-direction:column;align-items:flex-end;justify-content:flex-start;gap:2px}
+  .when{font-size:12px}.when.hot{padding:1px 8px}
+  .editbtn{width:36px;min-height:36px}
+  details.earlier>summary{padding:10px 0;min-height:44px;font-size:14.5px}
+  .year{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:8px}
+  .mtile{padding:10px;border-radius:12px;gap:5px}
+  .mtile h3{font-size:17px}.count{font-size:12px}
+  .mtile ul{font-size:13px;gap:2px}
+  .mtile li{grid-template-columns:18px 14px minmax(0,1fr);gap:3px}
+  .mtile li{align-items:center}
+  #calendarView .search input::placeholder{font-size:15px}
+  .mtile li svg{width:13px;height:13px}
+  .empty{padding:24px 10px 32px}.empty svg{width:110px;height:80px}
+  .stats{grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;margin:10px 0}
+  .stat{padding:8px 10px}.stat b{font-size:24px}.stat span{font-size:12px}
+  .famgrid{grid-template-columns:1fr}
+  .toasts{bottom:max(14px,env(safe-area-inset-bottom))}
   .two{grid-template-columns:1fr}
   table{font-size:14px}.stack thead{display:none}.stack tr{display:grid;padding-block:10px;border-bottom:1px solid var(--line)}
   .stack td{display:flow-root;border:0;padding:3px 0;padding-inline-start:6.5em;text-align:start}
@@ -279,6 +345,7 @@ dialog::backdrop{background:rgb(30 10 35/.45)}
   <symbol id="i-right" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5"/></symbol>
   <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3.5 2.5 20h19Z"/><path d="M12 10v4.5M12 17.5v.01"/></symbol>
+  <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M4 20h4L19 9l-4-4L4 16Z"/><path d="m13.5 6.5 4 4"/></symbol>
   <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
   <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14"/></symbol>
   <symbol id="i-up" viewBox="0 0 24 24"><path d="M12 16V5M7 9.5l5-5 5 5M5 20h14"/></symbol>
@@ -291,11 +358,11 @@ dialog::backdrop{background:rgb(30 10 35/.45)}
 
 <header class="top">
   <div class="wrap">
-    <h1 class="brand">Royal Dr Gang Celebrations</h1>
+    <h1 class="brand">Royal Dr Gang<span class="long"> Celebrations</span></h1>
     <p class="today-date" id="todayDate"></p>
     <nav class="tabs" aria-label="Sections">
       <a href="#" id="tabCal">Calendar</a>
-      <a href="#manage" id="tabManage">Manage events</a>
+      <a href="#manage" id="tabManage">Manage<span class="long"> events</span></a>
     </nav>
   </div>
 </header>
@@ -311,7 +378,7 @@ dialog::backdrop{background:rgb(30 10 35/.45)}
     <div class="row">
       <label class="search"><span class="sr">Search names and nicknames</span>
         <svg class="i"><use href="#i-search"/></svg>
-        <input id="q" type="search" placeholder="Search by name or pet name (e.g. Buddy, Bachi, Cherry)" autocomplete="off">
+        <input id="q" type="search" placeholder="Search names or pet names" autocomplete="off">
       </label>
       <div class="monthnav" id="monthNav">
         <button class="btn icon" id="prevM" aria-label="Previous month"><svg class="i"><use href="#i-left"/></svg></button>
@@ -323,13 +390,13 @@ dialog::backdrop{background:rgb(30 10 35/.45)}
     </div>
     <div class="row">
       <div class="chips" id="filters" role="group" aria-label="Filter events">
-        <button class="chip" data-f="all">All events</button>
+        <button class="chip" data-f="all">All<span class="long"> events</span></button>
         <button class="chip" data-f="birthday"><svg class="i"><use href="#i-cake"/></svg>Birthdays</button>
-        <button class="chip" data-f="anniversary"><svg class="i"><use href="#i-rings"/></svg>Wedding anniversaries</button>
+        <button class="chip" data-f="anniversary"><svg class="i"><use href="#i-rings"/></svg><span class="long">Wedding anniversaries</span><span class="short">Anniversaries</span></button>
       </div>
       <div class="seg" role="group" aria-label="View">
-        <button data-v="month">Selected month</button>
-        <button data-v="year">Full year</button>
+        <button data-v="month"><span class="long">Selected </span><span class="short">M</span><span class="long">m</span>onth</button>
+        <button data-v="year"><span class="long">Full </span><span class="short">Y</span><span class="long">y</span>ear</button>
       </div>
     </div>
   </div>
@@ -1007,7 +1074,7 @@ function toast(msg, action) {
 /* ---------- garland ---------- */
 function drawGarland() {
   const g = $("#garland");
-  const W = g.clientWidth || 1000, n = Math.max(8, Math.round(W / 30));
+  const W0 = g.clientWidth || 1000, H0 = g.clientHeight || 34, W = Math.round(W0 * 34 / H0), n = Math.max(8, Math.round(W / 30));
   let s = "";
   for (let i = 0; i < n; i++) {
     const x = (i + 0.5) * (W / n);
@@ -1085,7 +1152,7 @@ function cardHTML(ev) {
     </div>
     <div class="side">
       <span class="when ${w.days <= 1 ? "hot" : ""}">${esc(w.text)}</span>
-      <button class="btn ghost sm" data-edit="${esc(ev.id)}" aria-label="Edit ${esc(name)}">Edit</button>
+      <button class="btn ghost icon editbtn" data-edit="${esc(ev.id)}" aria-label="Edit ${esc(name)}" title="Edit">${ico("pencil")}</button>
     </div>
   </article>`;
 }
@@ -1133,14 +1200,21 @@ function renderMonth() {
       ? emptyHTML("No one matches that name", "Try a nickname or a shorter spelling — search covers aliases too.")
       : emptyHTML(`No ${fname} in ${R.MONTHS[S.month - 1]}`, "A quiet month. Use the arrows to see what's coming next."));
   }
-  return head + R.groupByDate(list).map((g) => {
+  const t0 = new Date(S.today.getFullYear(), S.today.getMonth(), S.today.getDate());
+  const groups = R.groupByDate(list);
+  const isPast = (g) => !searching && occThisYear(g.events[0]) < t0;
+  const past = groups.filter(isPast), rest = groups.filter((g) => !isPast(g));
+  const groupHTML = (g) => {
     const w = whenLabel(g.events[0]);
     const wd = WD[occThisYear(g.events[0]).getDay()];
     return `<section class="day ${w.days === 0 ? "is-today" : ""}" aria-label="${R.formatDayMonth(g.month, g.day)}">
       <header class="dh"><span class="dnum">${g.day}</span><b>${R.MONTHS[g.month - 1]}</b><span>${wd}${w.days === 0 ? " · today" : ""}</span></header>
       <div class="cards">${g.events.map(cardHTML).join("")}</div>
     </section>`;
-  }).join("");
+  };
+  const pastCount = past.reduce((n, g) => n + g.events.length, 0);
+  const earlier = past.length ? `<details class="earlier" ${rest.length ? "" : "open"}><summary>${S.month === S.today.getMonth() + 1 ? "Earlier this month" : "Already celebrated this year"} · ${pastCount} celebration${pastCount === 1 ? "" : "s"}</summary>${past.map(groupHTML).join("")}</details>` : "";
+  return head + earlier + rest.map(groupHTML).join("");
 }
 function renderYear() {
   const list = R.filterEvents(S.events, { filter: S.filter, query: S.query });
@@ -1148,18 +1222,18 @@ function renderYear() {
   const tiles = R.monthSummary(list).map((m) => {
     const all = [...m.birthdays, ...m.anniversaries].sort(R.compareEvents);
     return `<button class="mtile ${m.month === cur ? "cur" : ""}" data-month="${m.month}" aria-label="${m.name}: ${m.total} celebration${m.total === 1 ? "" : "s"}. Open month">
-      <header><h3>${m.name}</h3><span class="count">${m.total} · ${m.birthdays.length} ${ico("cake")} ${m.anniversaries.length} ${ico("rings")}</span></header>
+      <header><h3>${m.name}</h3><span class="count">${m.total}<span class="long"> · ${m.birthdays.length} ${ico("cake")} ${m.anniversaries.length} ${ico("rings")}</span></span></header>
       ${all.length ? `<ul>${all.map((e) => `<li class="${e.type === "birthday" ? "bd" : "an"}"><b>${e.day}</b>${ico(e.type === "birthday" ? "cake" : "rings")}<span>${esc(R.displayName(e))}</span></li>`).join("")}</ul>` : `<p class="none">No celebrations</p>`}
     </button>`;
   }).join("");
-  const head = `<div class="section-head"><h2>${S.today.getFullYear()} at a glance</h2><p id="countLine">${list.length} celebrations · ${countText(list)} · tap a month to open it</p></div>` + filterStatus();
+  const head = `<div class="section-head"><h2>${S.today.getFullYear()} at a glance</h2><p id="countLine">${list.length} celebrations<span class="long"> · ${countText(list)} · tap a month to open it</span></p></div>` + filterStatus();
   return head + (list.length ? `<div class="year">${tiles}</div>` : emptyHTML("Nothing matches these filters", "Clear the search or pick another filter."));
 }
 function renderCalendar() {
   for (const b of document.querySelectorAll("#filters .chip")) b.setAttribute("aria-pressed", b.dataset.f === S.filter);
   for (const b of document.querySelectorAll(".seg button")) b.setAttribute("aria-pressed", b.dataset.v === S.view);
   $("#monthSel").value = S.month;
-  $("#monthNav").style.visibility = S.view === "month" ? "" : "hidden";
+  $("#monthNav").hidden = S.view !== "month";
   const bn = [];
   if (S.loadError) bn.push(S.loadError);
   if (S.migrated && (S.migrated.added.length || (S.migrated.updated || []).length)) {
